@@ -1,0 +1,293 @@
+{
+  "students": {
+    "summary": {
+      "totalStudents": 8,
+      "undergraduate": 5,
+      "postgraduate": 3,
+      "activeProjects": 6,
+      "completedProjects": 4
+    },
+    "undergraduate": [
+      {
+        "id": "luxshan_thavarasa",
+        "name": "Luxshan Thavarasa",
+        "email": "luxshan.20@cse.mrt.ac.lk",
+        "year": "Final Year",
+        "degree": "BSc Computer Science and Engineering",
+        "specialization": "Full Stack Development & Artificial Intelligence",
+        "photo": "images/students/luxshan.jpg",
+        "shortTitle": "Full Stack Developer & AI Researcher",
+        "motto": "Seeing the unseen, shaping the future",
+        "bio": "A final-year Computer Science and Engineering student at the University of Moratuwa with a passion for Full Stack Development and Artificial Intelligence. As part of a group project, I am contributing to a multilingual Speech Emotion Recognition (SER) initiative focused on developing a universal model capable of recognizing speech emotions across 15+ languages. Our team has released EmoTa, a Tamil SER dataset capturing the nuances of Sri Lankan Tamil dialects, addressing resource gaps for Dravidian languages. Using technologies like Python, PyTorch, Transformers, and CNNs, we aim to advance inclusive and multilingual AI systems.",
+        "researchAreas": ["Speech Emotion Recognition", "Natural Language Processing", "Deep Learning", "Full Stack Development"],
+        "skills": ["Python", "PyTorch", "Transformers", "CNNs", "JavaScript", "React", "Node.js"],
+        "projects": [
+          {
+            "title": "Multilingual Speech Emotion Recognition",
+            "description": "Developing a universal model for recognizing speech emotions across 15+ languages",
+            "status": "active",
+            "technologies": ["Python", "PyTorch", "Transformers", "CNNs"],
+            "links": [
+              {
+                "title": "EmoTa Dataset",
+                "url": "#",
+                "icon": "fas fa-database"
+              }
+            ]
+          }
+        ],
+        "achievements": [
+          "Released EmoTa Tamil SER dataset",
+          "Contributing to multilingual AI research",
+          "Final year project on Speech Emotion Recognition"
+        ],
+        "socialLinks": {
+          "linkedin": "#",
+          "github": "#",
+          "email": "luxshan.20@cse.mrt.ac.lk"
+        },
+        "featured": true
+      },
+      {
+        "id": "student_2",
+        "name": "Kavinda Perera",
+        "email": "kavinda.20@cse.mrt.ac.lk",
+        "year": "3rd Year",
+        "degree": "BSc Computer Science and Engineering",
+        "specialization": "Machine Learning & Computer Vision",
+        "photo": "images/students/luxshan.jpg",
+        "shortTitle": "ML Engineer & Computer Vision Specialist",
+        "motto": "Innovation through intelligent systems",
+        "bio": "Third-year CSE student passionate about machine learning and computer vision applications. Currently working on object detection systems for autonomous vehicles and contributing to research in neural architecture search.",
+        "researchAreas": ["Computer Vision", "Object Detection", "Neural Architecture Search", "Autonomous Systems"],
+        "skills": ["Python", "TensorFlow", "OpenCV", "YOLO", "PyTorch", "CUDA"],
+        "projects": [
+          {
+            "title": "Autonomous Vehicle Object Detection",
+            "description": "Real-time object detection system for self-driving cars",
+            "status": "active",
+            "technologies": ["Python", "YOLO", "TensorFlow", "OpenCV"]
+          }
+        ],
+        "achievements": [
+          "Published paper on neural architecture search",
+          "Winner of AI hackathon 2023",
+          "Internship at local tech company"
+        ],
+        "socialLinks": {
+          "linkedin": "#",
+          "github": "#",
+          "email": "kavinda.20@cse.mrt.ac.lk"
+        },
+        "featured": false
+      },
+      {
+        "id": "student_3",
+        "name": "Nishani Silva",
+        "email": "nishani.20@cse.mrt.ac.lk",
+        "year": "Final Year",
+        "degree": "BSc Computer Science and Engineering",
+        "specialization": "Natural Language Processing",
+        "photo": "images/students/luxshan.jpg",
+        "shortTitle": "NLP Researcher & Linguist",
+        "motto": "Bridging languages through technology",
+        "bio": "Final-year student specializing in Natural Language Processing with focus on Sinhala language processing. Working on sentiment analysis for social media content and developing language models for low-resource languages.",
+        "researchAreas": ["Natural Language Processing", "Sentiment Analysis", "Language Models", "Computational Linguistics"],
+        "skills": ["Python", "NLTK", "spaCy", "Transformers", "BERT", "GPT"],
+        "projects": [
+          {
+            "title": "Sinhala Sentiment Analysis",
+            "description": "Social media sentiment analysis for Sinhala language",
+            "status": "active",
+            "technologies": ["Python", "Transformers", "BERT", "PyTorch"]
+          }
+        ],
+        "achievements": [
+          "Research on Sinhala NLP published in conference",
+          "Dean's list student 2022-2023",
+          "Google Summer of Code participant"
+        ],
+        "socialLinks": {
+          "linkedin": "#",
+          "github": "#",
+          "email": "nishani.20@cse.mrt.ac.lk"
+        },
+        "featured": true
+      },
+      {
+        "id": "student_4",
+        "name": "Ravindu Mendis",
+        "email": "ravindu.21@cse.mrt.ac.lk",
+        "year": "3rd Year",
+        "degree": "BSc Computer Science and Engineering",
+        "specialization": "Data Science & Analytics",
+        "photo": "images/students/luxshan.jpg",
+        "shortTitle": "Data Scientist & Analytics Expert",
+        "motto": "Turning data into insights",
+        "bio": "Third-year student with expertise in data science and analytics. Currently working on predictive models for financial markets and developing visualization tools for big data analysis.",
+        "researchAreas": ["Data Science", "Predictive Analytics", "Big Data", "Financial Technology"],
+        "skills": ["Python", "R", "Pandas", "Scikit-learn", "Tableau", "SQL"],
+        "projects": [
+          {
+            "title": "Financial Market Prediction",
+            "description": "ML models for stock market trend prediction",
+            "status": "active",
+            "technologies": ["Python", "Scikit-learn", "Pandas", "TensorFlow"]
+          }
+        ],
+        "achievements": [
+          "Internship at leading financial firm",
+          "Data science competition winner",
+          "Research paper on market prediction"
+        ],
+        "socialLinks": {
+          "linkedin": "#",
+          "github": "#",
+          "email": "ravindu.21@cse.mrt.ac.lk"
+        },
+        "featured": false
+      },
+      {
+        "id": "student_5",
+        "name": "Thilini Jayawardena",
+        "email": "thilini.21@cse.mrt.ac.lk",
+        "year": "3rd Year",
+        "degree": "BSc Computer Science and Engineering",
+        "specialization": "Human-Computer Interaction",
+        "photo": "images/students/luxshan.jpg",
+        "shortTitle": "UX Researcher & HCI Specialist",
+        "motto": "Designing for human experiences",
+        "bio": "Third-year student passionate about human-computer interaction and user experience design. Research focuses on accessibility in mobile applications and voice user interfaces for elderly users.",
+        "researchAreas": ["Human-Computer Interaction", "User Experience", "Accessibility", "Voice Interfaces"],
+        "skills": ["Python", "JavaScript", "React", "Figma", "Adobe XD", "User Research"],
+        "projects": [
+          {
+            "title": "Accessible Voice Interface",
+            "description": "Voice user interface design for elderly users",
+            "status": "active",
+            "technologies": ["JavaScript", "Web Speech API", "React", "Node.js"]
+          }
+        ],
+        "achievements": [
+          "Best UX design award university competition",
+          "Research on accessibility published",
+          "Internship at design consultancy"
+        ],
+        "socialLinks": {
+          "linkedin": "#",
+          "github": "#",
+          "email": "thilini.21@cse.mrt.ac.lk"
+        },
+        "featured": false
+      }
+    ],
+    "postgraduate": [
+      {
+        "id": "phd_1",
+        "name": "Dr. Chamila Wijayarathna",
+        "email": "chamila.phd@cse.mrt.ac.lk",
+        "year": "PhD Candidate",
+        "degree": "Doctor of Philosophy (Computer Science)",
+        "specialization": "Deep Learning for Medical Imaging",
+        "photo": "images/students/luxshan.jpg",
+        "shortTitle": "Medical AI Researcher",
+        "motto": "AI for healthcare innovation",
+        "bio": "PhD candidate specializing in deep learning applications for medical image analysis. Research focuses on automated diagnosis systems for radiology and pathology images using convolutional neural networks and attention mechanisms.",
+        "researchAreas": ["Medical Imaging", "Deep Learning", "Computer Vision", "Healthcare AI"],
+        "skills": ["Python", "TensorFlow", "PyTorch", "Medical Imaging", "CNNs", "GANs"],
+        "projects": [
+          {
+            "title": "Automated Radiology Diagnosis",
+            "description": "AI system for automated X-ray and CT scan analysis",
+            "status": "active",
+            "technologies": ["Python", "TensorFlow", "Medical Imaging", "CNNs"],
+            "links": [
+              {
+                "title": "Research Paper",
+                "url": "#",
+                "icon": "fas fa-file-alt"
+              }
+            ]
+          }
+        ],
+        "achievements": [
+          "Published 8 papers in top-tier conferences",
+          "Best paper award at MICCAI 2023",
+          "Collaboration with leading hospital"
+        ],
+        "socialLinks": {
+          "linkedin": "#",
+          "github": "#",
+          "email": "chamila.phd@cse.mrt.ac.lk"
+        },
+        "featured": true
+      },
+      {
+        "id": "msc_1",
+        "name": "Dinesh Fernando",
+        "email": "dinesh.msc@cse.mrt.ac.lk",
+        "year": "MSc Student",
+        "degree": "Master of Science (Computer Science)",
+        "specialization": "Distributed Systems & Cloud Computing",
+        "photo": "images/students/luxshan.jpg",
+        "shortTitle": "Cloud Systems Architect",
+        "motto": "Scaling systems for the future",
+        "bio": "Masters student researching distributed systems and cloud computing architectures. Currently working on microservices optimization and container orchestration for large-scale applications.",
+        "researchAreas": ["Distributed Systems", "Cloud Computing", "Microservices", "Container Orchestration"],
+        "skills": ["Docker", "Kubernetes", "AWS", "Go", "Python", "Microservices"],
+        "projects": [
+          {
+            "title": "Microservices Optimization",
+            "description": "Performance optimization for containerized microservices",
+            "status": "active",
+            "technologies": ["Docker", "Kubernetes", "Go", "Prometheus"]
+          }
+        ],
+        "achievements": [
+          "AWS certified solutions architect",
+          "Research published in distributed systems conference",
+          "Industry collaboration with cloud provider"
+        ],
+        "socialLinks": {
+          "linkedin": "#",
+          "github": "#",
+          "email": "dinesh.msc@cse.mrt.ac.lk"
+        },
+        "featured": false
+      },
+      {
+        "id": "msc_2",
+        "name": "Priya Rajapaksha",
+        "email": "priya.msc@cse.mrt.ac.lk",
+        "year": "MSc Student",
+        "degree": "Master of Science (Computer Science)",
+        "specialization": "Cybersecurity & Privacy",
+        "photo": "images/students/luxshan.jpg",
+        "shortTitle": "Cybersecurity Researcher",
+        "motto": "Securing the digital world",
+        "bio": "Masters student specializing in cybersecurity and privacy-preserving technologies. Research focuses on blockchain security, zero-knowledge proofs, and secure multi-party computation.",
+        "researchAreas": ["Cybersecurity", "Blockchain", "Privacy Technologies", "Cryptography"],
+        "skills": ["Blockchain", "Solidity", "Cryptography", "Python", "Security Analysis"],
+        "projects": [
+          {
+            "title": "Blockchain Security Analysis",
+            "description": "Security vulnerabilities in smart contracts",
+            "status": "active",
+            "technologies": ["Solidity", "Python", "Ethereum", "Security Tools"]
+          }
+        ],
+        "achievements": [
+          "Certified ethical hacker (CEH)",
+          "Security research published",
+          "Bug bounty hunter with multiple discoveries"
+        ],
+        "socialLinks": {
+          "linkedin": "#",
+          "github": "#",
+          "email": "priya.msc@cse.mrt.ac.lk"
+        },
+        "featured": true
+      }
+    ]
+  }
+}

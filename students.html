@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Students under supervision of Dr. Uthayasanker Thayasivam - University of Moratuwa Computer Science & Engineering" />
+        <meta name="keywords" content="students, supervision, university of moratuwa, computer science, research students" />
+        <meta name="author" content="Dr. Uthayasanker Thayasivam" />
+
+        <title>Students - Dr. Uthayasanker Thayasivam</title>
+
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+        <!-- Custom Styles -->
+        <style>
+            .fade-in {
+                opacity: 0;
+                transform: translateY(20px);
+                animation: fadeInUp 0.8s ease forwards;
+            }
+
+            @keyframes fadeInUp {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .student-card {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .student-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+
+            .student-photo {
+                width: 120px;
+                height: 120px;
+                object-fit: cover;
+                border: 4px solid #e5e7eb;
+                transition: border-color 0.3s ease;
+            }
+
+            .student-card:hover .student-photo {
+                border-color: #3b82f6;
+            }
+        </style>
+    </head>
+
+    <body class="bg-gray-50 font-sans">
+        <!-- Navigation -->
+        <nav class="bg-white shadow-lg sticky top-0 z-50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center md:justify-center">
+                    <button
+                        id="mobile-menu-btn"
+                        class="md:hidden focus:outline-none p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                        aria-label="Open mobile menu"
+                    >
+                        <i class="fas fa-bars text-xl text-gray-600"></i>
+                    </button>
+
+                    <ul id="nav-menu" class="hidden md:flex md:space-x-8 text-sm font-medium">
+                        <li>
+                            <a
+                                href="index.html"
+                                class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 py-6 block border-b-2 border-transparent hover:border-blue-600"
+                            >
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="biography.html"
+                                class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 py-6 block border-b-2 border-transparent hover:border-blue-600"
+                            >
+                                Biography
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="projects.html"
+                                class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 py-6 block border-b-2 border-transparent hover:border-blue-600"
+                            >
+                                Projects
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="students.html"
+                                class="nav-link text-blue-600 border-b-2 border-blue-600 transition-all duration-300 py-6 block"
+                            >
+                                Students
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="conferences.html"
+                                class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 py-6 block border-b-2 border-transparent hover:border-blue-600"
+                            >
+                                Conferences
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="teaching.html"
+                                class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 py-6 block border-b-2 border-transparent hover:border-blue-600"
+                            >
+                                Teaching
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://scholar.google.com/citations?user=N5tisn4AAAAJ&hl=en"
+                                target="_blank"
+                                class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 py-6 block border-b-2 border-transparent hover:border-blue-600"
+                            >
+                                Publications
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#contact"
+                                class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 py-6 block border-b-2 border-transparent hover:border-blue-600"
+                            >
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="w-9 md:hidden"></div>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div
+                    id="mobile-menu"
+                    class="hidden flex-col space-y-1 mt-4 md:hidden bg-white rounded-lg shadow-lg border border-gray-100 p-4"
+                >
+                    <a href="index.html" class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 text-gray-700 transition-colors">
+                        Home
+                    </a>
+                    <a href="biography.html" class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 text-gray-700 transition-colors">
+                        Biography
+                    </a>
+                    <a href="projects.html" class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 text-gray-700 transition-colors">
+                        Projects
+                    </a>
+                    <a href="students.html" class="block text-center py-3 px-4 rounded-md bg-blue-50 text-blue-600 font-medium">
+                        Students
+                    </a>
+                    <a href="conferences.html" class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 text-gray-700 transition-colors">
+                        Conferences
+                    </a>
+                    <a href="teaching.html" class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 text-gray-700 transition-colors">
+                        Teaching
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=N5tisn4AAAAJ&hl=en" target="_blank" class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 text-gray-700 transition-colors">
+                        Publications
+                    </a>
+                    <a href="#contact" class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 text-gray-700 transition-colors">
+                        Contact
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Header Section -->
+            <div class="fade-in text-center mb-12">
+                <h1 class="text-4xl sm:text-5xl font-bold text-slate-800 mb-4">Supervised Students</h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Talented undergraduate and postgraduate students working on cutting-edge research in NLP, Machine Learning, and Artificial Intelligence under the supervision of Dr. Uthayasanker Thayasivam.
+                </p>
+            </div>
+
+            <!-- Statistics Section -->
+            <div id="statistics" class="fade-in bg-white rounded-2xl shadow-sm border-0 p-8 mb-12">
+                <!-- Statistics will be loaded here -->
+            </div>
+
+            <!-- Filters -->
+            <div class="fade-in mb-8">
+                <div class="bg-white rounded-2xl shadow-sm border-0 p-6">
+                    <div class="flex flex-wrap gap-4 items-center justify-center">
+                        <button
+                            onclick="filterStudents('all')"
+                            class="filter-chip active px-6 py-2 rounded-full text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+                        >
+                            All Students
+                        </button>
+                        <button
+                            onclick="filterStudents('undergraduate')"
+                            class="filter-chip px-6 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                        >
+                            Undergraduate
+                        </button>
+                        <button
+                            onclick="filterStudents('postgraduate')"
+                            class="filter-chip px-6 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                        >
+                            Postgraduate
+                        </button>
+                    </div>
+
+                    <!-- Search Bar -->
+                    <div class="mt-6 relative max-w-md mx-auto">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                        <input
+                            type="text"
+                            id="student-search"
+                            onkeyup="searchStudents()"
+                            placeholder="Search students by name, research area, or project..."
+                            class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loading" class="text-center py-12">
+                <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+                <p class="text-gray-600 mt-4">Loading students...</p>
+            </div>
+
+            <!-- Error State -->
+            <div id="error" class="hidden text-center py-12">
+                <div class="text-red-500 text-6xl mb-4">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Unable to load student data</h3>
+                <p class="text-gray-600">Please check your connection and try again.</p>
+            </div>
+
+            <!-- Students Grid -->
+            <div id="students-container" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Student cards will be loaded here -->
+            </div>
+
+            <!-- No Results -->
+            <div id="no-results" class="hidden text-center py-12">
+                <div class="text-gray-400 text-6xl mb-4">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">No students found</h3>
+                <p class="text-gray-600">Try adjusting your search or filter criteria.</p>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer id="contact" class="bg-slate-800 text-white py-12">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                    <!-- Contact Information -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4 text-blue-400">Contact Information</h3>
+                        <div class="space-y-3 text-gray-300">
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-user mt-1 text-blue-400"></i>
+                                <div>
+                                    <p class="font-medium text-white">Dr. Uthayasanker Thayasivam</p>
+                                    <p class="text-sm">Senior Lecturer</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-envelope text-blue-400"></i>
+                                <a href="mailto:uthaya@cse.mrt.ac.lk" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                                    uthaya@cse.mrt.ac.lk
+                                </a>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-phone text-blue-400"></i>
+                                <span>+94 11 2640381</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-map-marker-alt mt-1 text-blue-400"></i>
+                                <div>
+                                    <p>Department of Computer Science & Engineering</p>
+                                    <p>University of Moratuwa</p>
+                                    <p>Sri Lanka</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Navigation -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4 text-blue-400">Quick Navigation</h3>
+                        <div class="space-y-2 text-gray-300">
+                            <a href="index.html" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                                <i class="fas fa-home mr-2 text-blue-400"></i>
+                                Home
+                            </a>
+                            <a href="biography.html" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                                <i class="fas fa-user mr-2 text-blue-400"></i>
+                                Biography
+                            </a>
+                            <a href="projects.html" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                                <i class="fas fa-project-diagram mr-2 text-blue-400"></i>
+                                Research Projects
+                            </a>
+                            <a href="students.html" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                                <i class="fas fa-user-graduate mr-2 text-blue-400"></i>
+                                Students
+                            </a>
+                            <a href="teaching.html" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                                <i class="fas fa-chalkboard-teacher mr-2 text-blue-400"></i>
+                                Teaching
+                            </a>
+                            <a href="conferences.html" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                                <i class="fas fa-calendar-alt mr-2 text-blue-400"></i>
+                                Conferences
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Research Areas -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4 text-blue-400">Research Focus</h3>
+                        <div class="space-y-2 text-gray-300">
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                                <i class="fas fa-brain mr-2 text-blue-400"></i>
+                                Natural Language Processing
+                            </a>
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                                <i class="fas fa-robot mr-2 text-blue-400"></i>
+                                Machine Learning
+                            </a>
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                                <i class="fas fa-chart-line mr-2 text-blue-400"></i>
+                                Data Science
+                            </a>
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                                <i class="fas fa-microphone-alt mr-2 text-blue-400"></i>
+                                Speech Processing
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Academic Network -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4 text-blue-400">Academic Network</h3>
+                        <div class="space-y-2 text-gray-300">
+                            <a
+                                href="https://scholar.google.com/citations?user=N5tisn4AAAAJ&hl=en"
+                                target="_blank"
+                                class="text-gray-300 hover:text-white transition-colors flex items-center"
+                            >
+                                <i class="fas fa-graduation-cap mr-2 text-blue-400"></i>
+                                Google Scholar
+                            </a>
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                                <i class="fab fa-researchgate mr-2 text-blue-400"></i>
+                                ResearchGate
+                            </a>
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                                <i class="fab fa-orcid mr-2 text-blue-400"></i>
+                                ORCID
+                            </a>
+                            <a href="https://www.cse.mrt.ac.lk/" target="_blank" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                                <i class="fas fa-university mr-2 text-blue-400"></i>
+                                CSE Department
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                    <p>&copy; 2024 Dr. Uthayasanker Thayasivam. University of Moratuwa - Computer Science & Engineering Department.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="js/students.js"></script>
+    </body>
+</html>
