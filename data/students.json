@@ -19,7 +19,12 @@
         "shortTitle": "Full Stack Developer & AI Researcher",
         "motto": "Seeing the unseen, shaping the future",
         "bio": "A final-year Computer Science and Engineering student at the University of Moratuwa with a passion for Full Stack Development and Artificial Intelligence. As part of a group project, I am contributing to a multilingual Speech Emotion Recognition (SER) initiative focused on developing a universal model capable of recognizing speech emotions across 15+ languages. Our team has released EmoTa, a Tamil SER dataset capturing the nuances of Sri Lankan Tamil dialects, addressing resource gaps for Dravidian languages. Using technologies like Python, PyTorch, Transformers, and CNNs, we aim to advance inclusive and multilingual AI systems.",
-        "researchAreas": ["Speech Emotion Recognition", "Natural Language Processing", "Deep Learning", "Full Stack Development"],
+        "researchAreas": [
+          "Speech Emotion Recognition",
+          "Natural Language Processing",
+          "Deep Learning",
+          "Full Stack Development"
+        ],
         "skills": ["Python", "PyTorch", "Transformers", "CNNs", "JavaScript", "React", "Node.js"],
         "projects": [
           {
@@ -59,7 +64,12 @@
         "shortTitle": "ML Engineer & Computer Vision Specialist",
         "motto": "Innovation through intelligent systems",
         "bio": "Third-year CSE student passionate about machine learning and computer vision applications. Currently working on object detection systems for autonomous vehicles and contributing to research in neural architecture search.",
-        "researchAreas": ["Computer Vision", "Object Detection", "Neural Architecture Search", "Autonomous Systems"],
+        "researchAreas": [
+          "Computer Vision",
+          "Object Detection",
+          "Neural Architecture Search",
+          "Autonomous Systems"
+        ],
         "skills": ["Python", "TensorFlow", "OpenCV", "YOLO", "PyTorch", "CUDA"],
         "projects": [
           {
@@ -92,7 +102,12 @@
         "shortTitle": "NLP Researcher & Linguist",
         "motto": "Bridging languages through technology",
         "bio": "Final-year student specializing in Natural Language Processing with focus on Sinhala language processing. Working on sentiment analysis for social media content and developing language models for low-resource languages.",
-        "researchAreas": ["Natural Language Processing", "Sentiment Analysis", "Language Models", "Computational Linguistics"],
+        "researchAreas": [
+          "Natural Language Processing",
+          "Sentiment Analysis",
+          "Language Models",
+          "Computational Linguistics"
+        ],
         "skills": ["Python", "NLTK", "spaCy", "Transformers", "BERT", "GPT"],
         "projects": [
           {
@@ -125,7 +140,12 @@
         "shortTitle": "Data Scientist & Analytics Expert",
         "motto": "Turning data into insights",
         "bio": "Third-year student with expertise in data science and analytics. Currently working on predictive models for financial markets and developing visualization tools for big data analysis.",
-        "researchAreas": ["Data Science", "Predictive Analytics", "Big Data", "Financial Technology"],
+        "researchAreas": [
+          "Data Science",
+          "Predictive Analytics",
+          "Big Data",
+          "Financial Technology"
+        ],
         "skills": ["Python", "R", "Pandas", "Scikit-learn", "Tableau", "SQL"],
         "projects": [
           {
@@ -158,7 +178,12 @@
         "shortTitle": "UX Researcher & HCI Specialist",
         "motto": "Designing for human experiences",
         "bio": "Third-year student passionate about human-computer interaction and user experience design. Research focuses on accessibility in mobile applications and voice user interfaces for elderly users.",
-        "researchAreas": ["Human-Computer Interaction", "User Experience", "Accessibility", "Voice Interfaces"],
+        "researchAreas": [
+          "Human-Computer Interaction",
+          "User Experience",
+          "Accessibility",
+          "Voice Interfaces"
+        ],
         "skills": ["Python", "JavaScript", "React", "Figma", "Adobe XD", "User Research"],
         "projects": [
           {
@@ -233,7 +258,12 @@
         "shortTitle": "Cloud Systems Architect",
         "motto": "Scaling systems for the future",
         "bio": "Masters student researching distributed systems and cloud computing architectures. Currently working on microservices optimization and container orchestration for large-scale applications.",
-        "researchAreas": ["Distributed Systems", "Cloud Computing", "Microservices", "Container Orchestration"],
+        "researchAreas": [
+          "Distributed Systems",
+          "Cloud Computing",
+          "Microservices",
+          "Container Orchestration"
+        ],
         "skills": ["Docker", "Kubernetes", "AWS", "Go", "Python", "Microservices"],
         "projects": [
           {

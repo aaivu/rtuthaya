@@ -118,12 +118,14 @@ function displayStudents(students) {
 
 function createStudentCard(student, index) {
     const studentDiv = document.createElement('div');
-    studentDiv.className = 'fade-in student-card bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300';
+    studentDiv.className =
+        'fade-in student-card bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300';
     studentDiv.style.animationDelay = `${index * 0.1}s`;
 
-    const levelBadge = student.level === 'undergraduate'
-        ? '<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Undergraduate</span>'
-        : '<span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Postgraduate</span>';
+    const levelBadge =
+        student.level === 'undergraduate'
+            ? '<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Undergraduate</span>'
+            : '<span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Postgraduate</span>';
 
     const featuredBadge = student.featured
         ? '<span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full ml-2"><i class="fas fa-star mr-1"></i>Featured</span>'
@@ -152,11 +154,15 @@ function createStudentCard(student, index) {
             </div>
 
             <!-- Motto -->
-            ${student.motto ? `
+            ${
+                student.motto
+                    ? `
                 <div class="text-center mb-4 px-4">
                     <p class="text-gray-600 italic text-sm">"${student.motto}"</p>
                 </div>
-            ` : ''}
+            `
+                    : ''
+            }
 
             <!-- Academic Info -->
             <div class="space-y-2 mb-4">
@@ -174,12 +180,18 @@ function createStudentCard(student, index) {
             <div class="mb-4">
                 <h4 class="text-sm font-semibold text-gray-700 mb-2">Research Areas</h4>
                 <div class="flex flex-wrap gap-1">
-                    ${student.researchAreas.slice(0, 3).map(area =>
-                        `<span class="bg-gray-100 text-gray-700 px-2 py-1 rounded-md text-xs">${area}</span>`
-                    ).join('')}
-                    ${student.researchAreas.length > 3 ?
-                        `<span class="bg-gray-100 text-gray-700 px-2 py-1 rounded-md text-xs">+${student.researchAreas.length - 3} more</span>`
-                        : ''}
+                    ${student.researchAreas
+                        .slice(0, 3)
+                        .map(
+                            area =>
+                                `<span class="bg-gray-100 text-gray-700 px-2 py-1 rounded-md text-xs">${area}</span>`
+                        )
+                        .join('')}
+                    ${
+                        student.researchAreas.length > 3
+                            ? `<span class="bg-gray-100 text-gray-700 px-2 py-1 rounded-md text-xs">+${student.researchAreas.length - 3} more</span>`
+                            : ''
+                    }
                 </div>
             </div>
 
@@ -239,15 +251,18 @@ function applyFilters() {
 
     // Apply search filter
     if (searchTerm) {
-        filtered = filtered.filter(student =>
-            student.name.toLowerCase().includes(searchTerm) ||
-            student.specialization.toLowerCase().includes(searchTerm) ||
-            student.researchAreas.some(area => area.toLowerCase().includes(searchTerm)) ||
-            student.bio.toLowerCase().includes(searchTerm) ||
-            (student.projects && student.projects.some(project =>
-                project.title.toLowerCase().includes(searchTerm) ||
-                project.description.toLowerCase().includes(searchTerm)
-            ))
+        filtered = filtered.filter(
+            student =>
+                student.name.toLowerCase().includes(searchTerm) ||
+                student.specialization.toLowerCase().includes(searchTerm) ||
+                student.researchAreas.some(area => area.toLowerCase().includes(searchTerm)) ||
+                student.bio.toLowerCase().includes(searchTerm) ||
+                (student.projects &&
+                    student.projects.some(
+                        project =>
+                            project.title.toLowerCase().includes(searchTerm) ||
+                            project.description.toLowerCase().includes(searchTerm)
+                    ))
         );
     }
 
@@ -260,4 +275,3 @@ window.viewStudentDetails = function (studentId) {
     // Navigate to individual student page
     window.location.href = `students/${studentId}.html`;
 };
-
