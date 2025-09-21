@@ -5,6 +5,7 @@ class AcademicWebsite {
 
     async init() {
         await this.loadContent();
+        await this.loadTeaching();
         this.setupNavigation();
         this.setupMobileMenu();
         this.setupScrollHighlight();
@@ -78,9 +79,11 @@ class AcademicWebsite {
         const content = document.createElement('div');
         content.className = 'prose max-w-none';
 
-        // Handle special sections
+        // Handle special sections - skip teaching as it's loaded separately
         if (sectionName === 'teaching') {
-            this.createTeachingSection(sectionData, content);
+            // Teaching content will be handled entirely by loadTeaching()
+            section.appendChild(content);
+            return section;
         } else if (sectionName === 'awards') {
             this.createAwardsSection(sectionData, content);
         } else if (sectionName === 'biography') {
@@ -99,6 +102,124 @@ class AcademicWebsite {
         section.appendChild(content);
 
         return section;
+    }
+
+    async loadTeaching() {
+        try {
+            const teachingData = await this.fetchData('data/teaching.json');
+            this.renderTeachingSection(teachingData);
+        } catch (error) {
+            console.error('Error loading teaching data:', error);
+        }
+    }
+
+    renderTeachingSection(data) {
+        const teachingSection = document.getElementById('teaching');
+        if (!teachingSection) return;
+
+        const content = teachingSection.querySelector('.prose');
+        if (!content) return;
+
+        // Clear existing content
+        content.innerHTML = '';
+
+        // Add brief summary stats
+        const summaryDiv = document.createElement('div');
+        summaryDiv.className = 'bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 mb-8 text-center';
+        summaryDiv.innerHTML = `
+            <div class="grid grid-cols-3 gap-4">
+                <div>
+                    <div class="text-2xl font-bold text-blue-600">${data.teaching.summary.totalCourses}+</div>
+                    <div class="text-sm text-gray-600">Courses Taught</div>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-green-600">${data.teaching.summary.yearsOfTeaching}</div>
+                    <div class="text-sm text-gray-600">Years Experience</div>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-purple-600">${data.teaching.summary.degrees.length}</div>
+                    <div class="text-sm text-gray-600">Programs</div>
+                </div>
+            </div>
+        `;
+        content.appendChild(summaryDiv);
+
+        // Add featured courses title
+        const featuredTitle = document.createElement('h3');
+        featuredTitle.className = 'text-xl font-semibold text-gray-700 mb-6';
+        featuredTitle.textContent = 'Featured Courses';
+        content.appendChild(featuredTitle);
+
+        // Create featured courses grid
+        const featuredGrid = this.createFeaturedCoursesGrid(data.teaching.featured);
+        content.appendChild(featuredGrid);
+
+        // Add "See More" button
+        const viewAllDiv = document.createElement('div');
+        viewAllDiv.className = 'text-center mt-8';
+        viewAllDiv.innerHTML = `
+            <a href="teaching.html" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-xl hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl">
+                <i class="fas fa-arrow-right mr-2"></i>
+                See All ${data.teaching.summary.totalCourses}+ Courses
+            </a>
+        `;
+        content.appendChild(viewAllDiv);
+    }
+
+    createFeaturedCoursesGrid(courses) {
+        const grid = document.createElement('div');
+        grid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6';
+
+        courses.forEach((course, index) => {
+            const courseCard = document.createElement('div');
+            courseCard.className = 'group bg-white p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300';
+            courseCard.style.animationDelay = `${index * 0.1}s`;
+
+            const categoryColor = this.getCategoryColor(course.category);
+
+            courseCard.innerHTML = `
+                <div class="flex items-start justify-between mb-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 ${categoryColor.bg} rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform">
+                            <i class="${course.icon} ${categoryColor.text} text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 text-sm">${course.code}</h4>
+                            <span class="text-xs ${categoryColor.text} font-medium">${course.category}</span>
+                        </div>
+                    </div>
+                    <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium">${course.role}</span>
+                </div>
+
+                <h5 class="font-bold text-gray-800 mb-2 leading-tight group-hover:text-blue-700 transition-colors">${course.name}</h5>
+                <p class="text-gray-600 text-sm mb-3 leading-relaxed">${course.description}</p>
+
+                <div class="flex items-center justify-between text-xs text-gray-500">
+                    <span class="flex items-center">
+                        <i class="fas fa-graduation-cap mr-1"></i>
+                        ${course.level}
+                    </span>
+                    <span>${course.degree}</span>
+                </div>
+            `;
+
+            grid.appendChild(courseCard);
+        });
+
+        return grid;
+    }
+
+    getCategoryColor(category) {
+        const colors = {
+            'Machine Learning': { bg: 'bg-blue-50', text: 'text-blue-600' },
+            'Data Science': { bg: 'bg-green-50', text: 'text-green-600' },
+            'AI & NLP': { bg: 'bg-purple-50', text: 'text-purple-600' },
+            'Big Data': { bg: 'bg-orange-50', text: 'text-orange-600' },
+            'Programming': { bg: 'bg-gray-50', text: 'text-gray-600' },
+            'Analytics': { bg: 'bg-red-50', text: 'text-red-600' },
+            'Statistics': { bg: 'bg-indigo-50', text: 'text-indigo-600' }
+        };
+        return colors[category] || { bg: 'bg-gray-50', text: 'text-gray-600' };
     }
 
     createTeachingSection(sectionData, content) {

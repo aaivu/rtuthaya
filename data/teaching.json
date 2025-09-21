@@ -1,0 +1,621 @@
+{
+  "teaching": {
+    "summary": {
+      "totalCourses": 150,
+      "yearsOfTeaching": "12+ years",
+      "degrees": ["Engineering CSE", "MSc/PG Dip in CS", "MSc/PG Dip in DS & AI", "MBA/PG Dip in BAS in IT", "Master of DS & AI"],
+      "roles": ["Main Examiner", "Moderator", "Co Examiner", "Evaluator"]
+    },
+    "featured": [
+      {
+        "code": "CS4681",
+        "name": "Advanced Machine Learning",
+        "degree": "Eng CSE",
+        "role": "Main Examiner",
+        "category": "Machine Learning",
+        "level": "Undergraduate",
+        "is_main_ui": true,
+        "icon": "fas fa-robot",
+        "description": "Advanced concepts in machine learning including deep learning, ensemble methods, and optimization techniques."
+      },
+      {
+        "code": "CS5617",
+        "name": "Data Science",
+        "degree": "MSc / PG Dip in DS & AI",
+        "role": "Main Examiner",
+        "category": "Data Science",
+        "level": "Postgraduate",
+        "is_main_ui": true,
+        "icon": "fas fa-chart-line",
+        "description": "Comprehensive coverage of data science methodology, statistical analysis, and predictive modeling."
+      },
+      {
+        "code": "CS5616",
+        "name": "Natural Language Processing",
+        "degree": "MSc / PG Dip in CS",
+        "role": "Moderator",
+        "category": "AI & NLP",
+        "level": "Postgraduate",
+        "is_main_ui": true,
+        "icon": "fas fa-language",
+        "description": "Text processing, language modeling, sentiment analysis, and modern NLP techniques."
+      },
+      {
+        "code": "CS5229",
+        "name": "Big Data Analytics Technologies",
+        "degree": "Master of DS & AI",
+        "role": "Main Examiner",
+        "category": "Big Data",
+        "level": "Postgraduate",
+        "is_main_ui": true,
+        "icon": "fas fa-database",
+        "description": "Distributed computing, Hadoop ecosystem, Spark, and scalable analytics platforms."
+      },
+      {
+        "code": "CS3121",
+        "name": "Introduction to Data Science",
+        "degree": "Eng CSE",
+        "role": "Moderator",
+        "category": "Data Science",
+        "level": "Undergraduate",
+        "is_main_ui": true,
+        "icon": "fas fa-microscope",
+        "description": "Fundamentals of data science, exploratory data analysis, and basic machine learning."
+      },
+      {
+        "code": "CS5802",
+        "name": "Advanced ML",
+        "degree": "MSc / PG Dip in DS & AI",
+        "role": "Main Examiner",
+        "category": "Machine Learning",
+        "level": "Postgraduate",
+        "is_main_ui": true,
+        "icon": "fas fa-brain",
+        "description": "Advanced machine learning algorithms, neural networks, and deep learning architectures."
+      }
+    ],
+    "courses": [
+      {
+        "intake": "In20",
+        "semester": "S6",
+        "code": "CS3751",
+        "name": "Data Visualization",
+        "degree": "Eng CSE",
+        "role": "Moderator",
+        "category": "Data Science",
+        "level": "Undergraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In20",
+        "semester": "S7",
+        "code": "CS4681",
+        "name": "Advanced Machine Learning",
+        "degree": "Eng CSE",
+        "role": "Main Examiner",
+        "category": "Machine Learning",
+        "level": "Undergraduate",
+        "is_main_ui": true
+      },
+      {
+        "intake": "In24",
+        "semester": "S5",
+        "code": "CS5121",
+        "name": "Enterprise Information Management",
+        "degree": "MBA / PG Dip in BAS in IT",
+        "role": "Main Examiner",
+        "category": "Information Systems",
+        "level": "Postgraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In25",
+        "semester": "S1",
+        "code": "CS5229",
+        "name": "Big Data Analytics Technologies",
+        "degree": "Master of DS & AI",
+        "role": "Main Examiner",
+        "category": "Big Data",
+        "level": "Postgraduate",
+        "is_main_ui": true
+      },
+      {
+        "intake": "In25",
+        "semester": "S2",
+        "code": "CS5651",
+        "name": "Statistical Inference",
+        "degree": "MSc / PG Dip in DS & AI",
+        "role": "Main Examiner",
+        "category": "Statistics",
+        "level": "Postgraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In21",
+        "semester": "S7",
+        "code": "CS4681",
+        "name": "Advanced Machine Learning",
+        "degree": "Eng CSE",
+        "role": "Main Examiner",
+        "category": "Machine Learning",
+        "level": "Undergraduate",
+        "is_main_ui": true
+      },
+      {
+        "intake": "In25",
+        "semester": "S2",
+        "code": "CS5616",
+        "name": "Natural Language Processing",
+        "degree": "MSc / PG Dip in CS",
+        "role": "Moderator",
+        "category": "AI & NLP",
+        "level": "Postgraduate",
+        "is_main_ui": true
+      },
+      {
+        "intake": "In25",
+        "semester": "S2",
+        "code": "CS5826",
+        "name": "Advanced Natural Language Processing",
+        "degree": "MSc / PG Dip in CS",
+        "role": "Moderator",
+        "category": "AI & NLP",
+        "level": "Postgraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In25",
+        "semester": "S2",
+        "code": "CS5801",
+        "name": "Advanced AI",
+        "degree": "MSc / PG Dip in DS & AI",
+        "role": "Moderator",
+        "category": "AI & NLP",
+        "level": "Postgraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In25",
+        "semester": "S1",
+        "code": "CS5617",
+        "name": "Data Science",
+        "degree": "Master of DS & AI",
+        "role": "Main Examiner",
+        "category": "Data Science",
+        "level": "Postgraduate",
+        "is_main_ui": true
+      },
+      {
+        "intake": "In23",
+        "semester": "S5",
+        "code": "CS5121",
+        "name": "Enterprise Information Management",
+        "degree": "MBA / PG Dip in BAS in IT",
+        "role": "Main Examiner",
+        "category": "Information Systems",
+        "level": "Postgraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In20",
+        "semester": "S8",
+        "code": "CS4203",
+        "name": "Research and Development Project",
+        "degree": "Eng CSE",
+        "role": "Co Examiner",
+        "category": "Research",
+        "level": "Undergraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In25",
+        "semester": "S1",
+        "code": "CS5617",
+        "name": "Data Science",
+        "degree": "MSc / PG Dip in DS & AI",
+        "role": "Main Examiner",
+        "category": "Data Science",
+        "level": "Postgraduate",
+        "is_main_ui": true
+      },
+      {
+        "intake": "In20",
+        "semester": "S8",
+        "code": "CS4691",
+        "name": "Advanced Artificial Intelligence",
+        "degree": "Eng CSE",
+        "role": "Moderator",
+        "category": "AI & NLP",
+        "level": "Undergraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In19",
+        "semester": "S7",
+        "code": "CS4650",
+        "name": "Big Data Analytics",
+        "degree": "Eng CSE",
+        "role": "Main Examiner",
+        "category": "Big Data",
+        "level": "Undergraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In22",
+        "semester": "S4",
+        "code": "CS3121",
+        "name": "Introduction to Data Science",
+        "degree": "Eng CSE",
+        "role": "Moderator",
+        "category": "Data Science",
+        "level": "Undergraduate",
+        "is_main_ui": true
+      },
+      {
+        "intake": "In20",
+        "semester": "S8",
+        "code": "CS3121",
+        "name": "Introduction to Data Science",
+        "degree": "Eng CSE",
+        "role": "Moderator",
+        "category": "Data Science",
+        "level": "Undergraduate",
+        "is_main_ui": true
+      },
+      {
+        "intake": "In25",
+        "semester": "S2",
+        "code": "CS5802",
+        "name": "Advanced ML",
+        "degree": "MSc / PG Dip in DS & AI",
+        "role": "Main Examiner",
+        "category": "Machine Learning",
+        "level": "Postgraduate",
+        "is_main_ui": true
+      },
+      {
+        "intake": "In24",
+        "semester": "S2",
+        "code": "CS5651",
+        "name": "Statistical Inference",
+        "degree": "MSc / PG Dip in DS & AI",
+        "role": "Main Examiner",
+        "category": "Statistics",
+        "level": "Postgraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In25",
+        "semester": "S2",
+        "code": "CS5621",
+        "name": "Machine Learning",
+        "degree": "MSc / PG Dip in CS",
+        "role": "Main Examiner",
+        "category": "Machine Learning",
+        "level": "Postgraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In23",
+        "semester": "S2",
+        "code": "CS5651",
+        "name": "Statistical Inference",
+        "degree": "MSc / PG Dip in CS",
+        "role": "Main Examiner",
+        "category": "Statistics",
+        "level": "Postgraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In23",
+        "semester": "S4",
+        "code": "CS5618",
+        "name": "Business Intelligence",
+        "degree": "MBA / PG Dip in BAS in IT",
+        "role": "Moderator",
+        "category": "Business Intelligence",
+        "level": "Postgraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In19",
+        "semester": "S2",
+        "code": "CS5229",
+        "name": "Big Data Analytics Technologies",
+        "degree": "MSc / PG Dip in CS",
+        "role": "Main Examiner",
+        "category": "Big Data",
+        "level": "Postgraduate",
+        "is_main_ui": true
+      },
+      {
+        "intake": "In25",
+        "semester": "S1",
+        "code": "CS5229",
+        "name": "Big Data Analytics Technologies",
+        "degree": "MSc / PG Dip in CS",
+        "role": "Main Examiner",
+        "category": "Big Data",
+        "level": "Postgraduate",
+        "is_main_ui": true
+      },
+      {
+        "intake": "In24",
+        "semester": "S4",
+        "code": "CS5122",
+        "name": "Descriptive and Predictive Analytics",
+        "degree": "MBA / PG Dip in BAS in IT",
+        "role": "Main Examiner",
+        "category": "Analytics",
+        "level": "Postgraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In24",
+        "semester": "S3",
+        "code": "CS5999",
+        "name": "PG Dip Project",
+        "degree": "MSc / PG Dip in CS",
+        "role": "Co Examiner",
+        "category": "Research",
+        "level": "Postgraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In22",
+        "semester": "S4",
+        "code": "CS3111",
+        "name": "Introduction to Machine Learning",
+        "degree": "Eng CSE",
+        "role": "Main Examiner",
+        "category": "Machine Learning",
+        "level": "Undergraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In20",
+        "semester": "S4",
+        "code": "CS3111",
+        "name": "Introduction to Machine Learning",
+        "degree": "Eng CSE",
+        "role": "Main Examiner",
+        "category": "Machine Learning",
+        "level": "Undergraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In20",
+        "semester": "S8",
+        "code": "CS4651",
+        "name": "Big Data Analytics",
+        "degree": "Eng CSE",
+        "role": "Main Examiner",
+        "category": "Big Data",
+        "level": "Undergraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In24",
+        "semester": "S1",
+        "code": "CS5617",
+        "name": "Data Science",
+        "degree": "MSc / PG Dip in DS & AI",
+        "role": "Main Examiner",
+        "category": "Data Science",
+        "level": "Postgraduate",
+        "is_main_ui": true
+      },
+      {
+        "intake": "In23",
+        "semester": "S2",
+        "code": "CS2023",
+        "name": "Data Structures and Algorithms",
+        "degree": "Eng CSE",
+        "role": "Main Examiner",
+        "category": "Programming",
+        "level": "Undergraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In22",
+        "semester": "S4",
+        "code": "CS2023",
+        "name": "Data Structures and Algorithms",
+        "degree": "Eng CSE",
+        "role": "Main Examiner",
+        "category": "Programming",
+        "level": "Undergraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In24",
+        "semester": "S1",
+        "code": "CS5229",
+        "name": "Big Data Analytics Technologies",
+        "degree": "MSc / PG Dip in DS & AI",
+        "role": "Main Examiner",
+        "category": "Big Data",
+        "level": "Postgraduate",
+        "is_main_ui": true
+      },
+      {
+        "intake": "In21",
+        "semester": "S1",
+        "code": "CS5617",
+        "name": "Data Science",
+        "degree": "MSc / PG Dip in CS",
+        "role": "Moderator",
+        "category": "Data Science",
+        "level": "Postgraduate",
+        "is_main_ui": true
+      },
+      {
+        "intake": "In22",
+        "semester": "S2",
+        "code": "CS2023",
+        "name": "Data Structures and Algorithms",
+        "degree": "Eng CSE",
+        "role": "Main Examiner",
+        "category": "Programming",
+        "level": "Undergraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In23",
+        "semester": "S4",
+        "code": "CS5122",
+        "name": "Descriptive and Predictive Analytics",
+        "degree": "MBA / PG Dip in BAS in IT",
+        "role": "Main Examiner",
+        "category": "Analytics",
+        "level": "Postgraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In21",
+        "semester": "S5",
+        "code": "CS3501",
+        "name": "Data Science and Engineering Project",
+        "degree": "Eng CSE",
+        "role": "Co Examiner",
+        "category": "Projects",
+        "level": "Undergraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In24",
+        "semester": "S3",
+        "code": "CS5805",
+        "name": "Information Visualization",
+        "degree": "MSc / PG Dip in DS & AI",
+        "role": "Moderator",
+        "category": "Data Science",
+        "level": "Postgraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In24",
+        "semester": "S3",
+        "code": "CS5804",
+        "name": "Advanced Deep Learning",
+        "degree": "MSc / PG Dip in DS & AI",
+        "role": "Moderator",
+        "category": "Machine Learning",
+        "level": "Postgraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In21",
+        "semester": "S5",
+        "code": "CS3631",
+        "name": "Deep Neural Networks",
+        "degree": "Eng CSE",
+        "role": "Moderator",
+        "category": "Machine Learning",
+        "level": "Undergraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In20",
+        "semester": "S7",
+        "code": "CS4661",
+        "name": "Natural Language Processing",
+        "degree": "Eng CSE",
+        "role": "Moderator",
+        "category": "AI & NLP",
+        "level": "Undergraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In21",
+        "semester": "S2",
+        "code": "CS2023",
+        "name": "Data Structures and Algorithms",
+        "degree": "Eng CSE",
+        "role": "Main Examiner",
+        "category": "Programming",
+        "level": "Undergraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In20",
+        "semester": "S2",
+        "code": "CS2023",
+        "name": "Data Structures and Algorithms",
+        "degree": "Eng CSE",
+        "role": "Main Examiner",
+        "category": "Programming",
+        "level": "Undergraduate",
+        "is_main_ui": false
+      },
+      {
+        "intake": "In25",
+        "semester": "S1",
+        "code": "CS5803",
+        "name": "Advanced Data Mining",
+        "degree": "MSc / PG Dip in DS & AI",
+        "role": "Moderator",
+        "category": "Data Science",
+        "level": "Postgraduate",
+        "is_main_ui": false
+      }
+    ],
+    "categories": {
+      "Machine Learning": {
+        "icon": "fas fa-robot",
+        "color": "blue",
+        "count": 25
+      },
+      "Data Science": {
+        "icon": "fas fa-chart-line",
+        "color": "green",
+        "count": 20
+      },
+      "AI & NLP": {
+        "icon": "fas fa-language",
+        "color": "purple",
+        "count": 15
+      },
+      "Big Data": {
+        "icon": "fas fa-database",
+        "color": "orange",
+        "count": 12
+      },
+      "Programming": {
+        "icon": "fas fa-code",
+        "color": "gray",
+        "count": 18
+      },
+      "Analytics": {
+        "icon": "fas fa-chart-bar",
+        "color": "red",
+        "count": 8
+      },
+      "Statistics": {
+        "icon": "fas fa-calculator",
+        "color": "indigo",
+        "count": 10
+      },
+      "Research": {
+        "icon": "fas fa-microscope",
+        "color": "pink",
+        "count": 15
+      },
+      "Information Systems": {
+        "icon": "fas fa-server",
+        "color": "yellow",
+        "count": 6
+      },
+      "Business Intelligence": {
+        "icon": "fas fa-business-time",
+        "color": "teal",
+        "count": 4
+      },
+      "Projects": {
+        "icon": "fas fa-project-diagram",
+        "color": "cyan",
+        "count": 7
+      }
+    }
+  }
+}

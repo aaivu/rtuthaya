@@ -69,26 +69,7 @@
     ]
   },
   "teaching": {
-    "title": "Teaching",
-    "subtitle": "University of Moratuwa",
-    "undergraduate": {
-      "title": "Undergraduate",
-      "courses": [
-        "Data Structures and Algorithms",
-        "Information Retrieval",
-        "Machine Learning",
-        "Presentation Skills"
-      ]
-    },
-    "postgraduate": {
-      "title": "Postgraduate",
-      "courses": [
-        "Advanced Database Systems",
-        "Statistical Inference",
-        "Machine Learning",
-        "Big Data"
-      ]
-    }
+    "title": "Teaching"
   },
   "awards": {
     "title": "Awards & Grants",
