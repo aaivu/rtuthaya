@@ -137,7 +137,8 @@ function displayProjects(projects) {
 
 function createProjectCard(project, index) {
     const projectDiv = document.createElement('div');
-    projectDiv.className = 'fade-in project-card bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer';
+    projectDiv.className =
+        'fade-in project-card bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer';
     projectDiv.style.animationDelay = `${index * 0.1}s`;
 
     const statusBadge =
@@ -172,8 +173,8 @@ function createProjectCard(project, index) {
                     View Details
                 </button>
                 ${
-    codebaseLink
-        ? `
+                    codebaseLink
+                        ? `
                     <a href="${codebaseLink.url}"
                        target="_blank"
                        rel="noopener noreferrer"
@@ -181,8 +182,8 @@ function createProjectCard(project, index) {
                         <i class="${codebaseLink.icon}"></i>
                     </a>
                 `
-        : ''
-}
+                        : ''
+                }
             </div>
         </div>
     `;
@@ -204,19 +205,19 @@ function createImageCarousel(project) {
     return `
         <div class="carousel-container h-96 sm:h-[28rem] md:h-[32rem] relative" id="${carouselId}">
             ${project.images
-        .map(
-            (image, index) => `
+                .map(
+                    (image, index) => `
                 <img src="${image.url}"
                      alt="${image.caption || project.title}"
                      class="carousel-image absolute inset-0 w-full h-full object-cover ${index === 0 ? 'opacity-100' : 'opacity-0'}"
                      data-index="${index}">
             `
-        )
-        .join('')}
+                )
+                .join('')}
 
             ${
-    project.images.length > 1
-        ? `
+                project.images.length > 1
+                    ? `
                 <button class="carousel-nav prev" onclick="changeImage('${carouselId}', -1)">
                     <i class="fas fa-chevron-left"></i>
                 </button>
@@ -226,17 +227,17 @@ function createImageCarousel(project) {
 
                 <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
                     ${project.images
-        .map(
-            (_, index) => `
+                        .map(
+                            (_, index) => `
                         <div class="w-2 h-2 rounded-full bg-white opacity-50 cursor-pointer carousel-dot ${index === 0 ? 'opacity-100' : ''}"
                              onclick="goToImage('${carouselId}', ${index})"></div>
                     `
-        )
-        .join('')}
+                        )
+                        .join('')}
                 </div>
             `
-        : ''
-}
+                    : ''
+            }
         </div>
     `;
 }
@@ -255,26 +256,26 @@ function createResultsSection(results) {
                 </div>
 
                 ${
-    results.contributions && results.contributions.length > 0
-        ? `
+                    results.contributions && results.contributions.length > 0
+                        ? `
                     <div>
                         <h4 class="font-semibold text-gray-800 mb-3">Key Contributions</h4>
                         <div class="grid md:grid-cols-2 gap-4">
                             ${results.contributions
-        .map(
-            contrib => `
+                                .map(
+                                    contrib => `
                                 <div class="bg-blue-50 p-4 rounded-xl border-l-4 border-blue-400">
                                     <h5 class="font-medium text-blue-800 mb-2">${contrib.title}</h5>
                                     <p class="text-gray-700 text-sm leading-relaxed">${contrib.description}</p>
                                 </div>
                             `
-        )
-        .join('')}
+                                )
+                                .join('')}
                         </div>
                     </div>
                 `
-        : ''
-}
+                        : ''
+                }
 
                 <div class="bg-green-50 p-6 rounded-xl border-0">
                     <h4 class="font-semibold text-green-800 mb-3">Impact</h4>
@@ -291,15 +292,15 @@ function createAwardsSection(awards) {
             <h3 class="text-xl font-semibold text-slate-800 mb-4">Awards & Recognition</h3>
             <div class="space-y-4">
                 ${awards
-        .map(
-            award => `
+                    .map(
+                        award => `
                     <div class="bg-yellow-50 p-6 rounded-xl border-0">
                         <h4 class="font-semibold text-yellow-800 mb-2">${award.title}</h4>
                         <p class="text-gray-700 mb-3">${award.description}</p>
 
                         ${
-    award.details
-        ? `
+                            award.details
+                                ? `
                             <div class="text-sm text-gray-600 space-y-1">
                                 ${award.details.paper_title ? `<p><strong>Paper:</strong> ${award.details.paper_title}</p>` : ''}
                                 ${award.details.authors ? `<p><strong>Authors:</strong> ${award.details.authors.join(', ')}</p>` : ''}
@@ -307,12 +308,12 @@ function createAwardsSection(awards) {
                                 ${award.details.date ? `<p><strong>Date:</strong> ${award.details.date}</p>` : ''}
                             </div>
                         `
-        : ''
-}
+                                : ''
+                        }
                     </div>
                 `
-        )
-        .join('')}
+                    )
+                    .join('')}
             </div>
         </div>
     `;
@@ -326,8 +327,8 @@ function createTeamSection(team) {
             <h3 class="text-xl font-semibold text-slate-800 mb-4">Team Members</h3>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 ${team
-        .map(
-            member => `
+                    .map(
+                        member => `
                     <div class="bg-gray-50 p-6 rounded-xl text-center border-0">
                         <div class="mb-4">
                             <h4 class="font-semibold text-gray-800">${member.name}</h4>
@@ -343,8 +344,8 @@ function createTeamSection(team) {
                         </div>
                     </div>
                 `
-        )
-        .join('')}
+                    )
+                    .join('')}
             </div>
         </div>
     `;
@@ -362,12 +363,12 @@ function createLinksSection(links) {
 
             <div class="space-y-4">
                 ${
-    primaryLinks.length > 0
-        ? `
+                    primaryLinks.length > 0
+                        ? `
                     <div class="flex flex-wrap gap-3">
                         ${primaryLinks
-        .map(
-            link => `
+                            .map(
+                                link => `
                             <a href="${link.url}"
                                target="_blank"
                                rel="noopener noreferrer"
@@ -376,20 +377,20 @@ function createLinksSection(links) {
                                 ${link.title}
                             </a>
                         `
-        )
-        .join('')}
+                            )
+                            .join('')}
                     </div>
                 `
-        : ''
-}
+                        : ''
+                }
 
                 ${
-    secondaryLinks.length > 0
-        ? `
+                    secondaryLinks.length > 0
+                        ? `
                     <div class="flex flex-wrap gap-2">
                         ${secondaryLinks
-        .map(
-            link => `
+                            .map(
+                                link => `
                             <a href="${link.url}"
                                target="_blank"
                                rel="noopener noreferrer"
@@ -398,12 +399,12 @@ function createLinksSection(links) {
                                 ${link.title}
                             </a>
                         `
-        )
-        .join('')}
+                            )
+                            .join('')}
                     </div>
                 `
-        : ''
-}
+                        : ''
+                }
             </div>
         </div>
     `;
@@ -527,15 +528,15 @@ function applyFilters() {
 
     // Apply status/type filter
     switch (currentFilter) {
-    case 'completed':
-        filtered = filtered.filter(project => project.status === 'completed');
-        break;
-    case 'in_progress':
-        filtered = filtered.filter(project => project.status === 'in_progress');
-        break;
-    case 'featured':
-        filtered = filtered.filter(project => project.featured);
-        break;
+        case 'completed':
+            filtered = filtered.filter(project => project.status === 'completed');
+            break;
+        case 'in_progress':
+            filtered = filtered.filter(project => project.status === 'in_progress');
+            break;
+        case 'featured':
+            filtered = filtered.filter(project => project.featured);
+            break;
         // 'all' case - no additional filtering
     }
 

@@ -140,8 +140,8 @@ function createConferenceCard(conference, index) {
                 </div>
 
                 ${
-    isSubmissionOpen && daysToSubmission <= 30
-        ? `
+                    isSubmissionOpen && daysToSubmission <= 30
+                        ? `
                     <div class="text-right">
                         <span class="bg-red-100 text-red-800 text-xs font-medium px-2 py-1 rounded-full">
                             <i class="fas fa-clock mr-1"></i>
@@ -149,8 +149,8 @@ function createConferenceCard(conference, index) {
                         </span>
                     </div>
                 `
-        : ''
-}
+                        : ''
+                }
             </div>
 
             <!-- Dates -->
@@ -175,11 +175,11 @@ function createConferenceCard(conference, index) {
             <div class="mb-4">
                 <div class="flex flex-wrap gap-2">
                     ${conference.topics
-        .map(topic => {
-            const colorClass = getTopicColor(topic);
-            return `<span class="px-2 py-1 rounded-full text-xs font-medium ${colorClass}">${topic}</span>`;
-        })
-        .join('')}
+                        .map(topic => {
+                            const colorClass = getTopicColor(topic);
+                            return `<span class="px-2 py-1 rounded-full text-xs font-medium ${colorClass}">${topic}</span>`;
+                        })
+                        .join('')}
                 </div>
             </div>
 
@@ -187,10 +187,10 @@ function createConferenceCard(conference, index) {
             <div class="flex justify-between items-center">
                 <div class="text-sm text-gray-500">
                     ${
-    isSubmissionOpen
-        ? '<i class="fas fa-paper-plane mr-1 text-green-600"></i>Submissions Open'
-        : '<i class="fas fa-times-circle mr-1 text-red-500"></i>Submissions Closed'
-}
+                        isSubmissionOpen
+                            ? '<i class="fas fa-paper-plane mr-1 text-green-600"></i>Submissions Open'
+                            : '<i class="fas fa-times-circle mr-1 text-red-500"></i>Submissions Closed'
+                    }
                 </div>
                 <a href="${conference.website}"
                    target="_blank"
@@ -237,27 +237,27 @@ window.filterConferences = function (filterType) {
     const today = new Date();
 
     switch (filterType) {
-    case 'all':
-        filteredConferences = [...allConferences];
-        break;
-    case 'conference':
-        filteredConferences = allConferences.filter(conf => conf.type === 'conference');
-        break;
-    case 'workshop':
-        filteredConferences = allConferences.filter(conf => conf.type === 'workshop');
-        break;
-    case 'open':
-        filteredConferences = allConferences.filter(conf => {
-            const submissionDate = new Date(conf.submissionDate);
-            return submissionDate > today;
-        });
-        break;
-    case 'upcoming':
-        filteredConferences = allConferences.filter(conf => {
-            const conferenceDate = new Date(conf.conferenceDate);
-            return conferenceDate > today;
-        });
-        break;
+        case 'all':
+            filteredConferences = [...allConferences];
+            break;
+        case 'conference':
+            filteredConferences = allConferences.filter(conf => conf.type === 'conference');
+            break;
+        case 'workshop':
+            filteredConferences = allConferences.filter(conf => conf.type === 'workshop');
+            break;
+        case 'open':
+            filteredConferences = allConferences.filter(conf => {
+                const submissionDate = new Date(conf.submissionDate);
+                return submissionDate > today;
+            });
+            break;
+        case 'upcoming':
+            filteredConferences = allConferences.filter(conf => {
+                const conferenceDate = new Date(conf.conferenceDate);
+                return conferenceDate > today;
+            });
+            break;
     }
 
     sortConferences();

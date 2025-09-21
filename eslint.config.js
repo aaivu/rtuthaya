@@ -29,7 +29,7 @@ export default [
             'no-console': 'off',
             semi: ['error', 'always'],
             quotes: ['error', 'single', { avoidEscape: true }],
-            indent: ['error', 4],
+            // indent: ['error', 4], // Disabled - handled by Prettier
             'no-trailing-spaces': 'error',
             'eol-last': 'error',
             'comma-dangle': ['error', 'never'],

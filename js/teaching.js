@@ -94,22 +94,22 @@ function displaySummaryStats(summary) {
                     <h4 class="font-semibold text-gray-800 mb-3">Degree Programs</h4>
                     <div class="flex flex-wrap gap-2">
                         ${summary.degrees
-        .map(
-            degree =>
-                `<span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">${degree}</span>`
-        )
-        .join('')}
+                            .map(
+                                degree =>
+                                    `<span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">${degree}</span>`
+                            )
+                            .join('')}
                     </div>
                 </div>
                 <div class="bg-white rounded-xl p-4 shadow-sm">
                     <h4 class="font-semibold text-gray-800 mb-3">Teaching Roles</h4>
                     <div class="flex flex-wrap gap-2">
                         ${summary.roles
-        .map(
-            role =>
-                `<span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">${role}</span>`
-        )
-        .join('')}
+                            .map(
+                                role =>
+                                    `<span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">${role}</span>`
+                            )
+                            .join('')}
                     </div>
                 </div>
             </div>
@@ -314,18 +314,18 @@ function applyFilters() {
 
     // Apply level/role filter
     switch (currentFilter) {
-    case 'undergraduate':
-        filtered = filtered.filter(course => course.level === 'Undergraduate');
-        break;
-    case 'postgraduate':
-        filtered = filtered.filter(course => course.level === 'Postgraduate');
-        break;
-    case 'main_examiner':
-        filtered = filtered.filter(course => course.role === 'Main Examiner');
-        break;
-    case 'moderator':
-        filtered = filtered.filter(course => course.role === 'Moderator');
-        break;
+        case 'undergraduate':
+            filtered = filtered.filter(course => course.level === 'Undergraduate');
+            break;
+        case 'postgraduate':
+            filtered = filtered.filter(course => course.level === 'Postgraduate');
+            break;
+        case 'main_examiner':
+            filtered = filtered.filter(course => course.role === 'Main Examiner');
+            break;
+        case 'moderator':
+            filtered = filtered.filter(course => course.role === 'Moderator');
+            break;
         // 'all' case - no additional filtering
     }
 
