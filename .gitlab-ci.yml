@@ -1,0 +1,326 @@
+# 🔍 Academic Website CI/CD - GitLab
+# Dr. Uthayasanker Thayasivam's Research Portfolio
+
+stages:
+  - validate
+  - quality
+  - security
+  - deploy
+  - notify
+
+variables:
+  NODE_VERSION: "18"
+  PYTHON_VERSION: "3.9"
+
+# Cache for faster builds
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+    - .npm/
+
+before_script:
+  - echo "🚀 Starting CI/CD Pipeline for Academic Website"
+  - echo "👨‍🏫 Dr. Uthayasanker Thayasivam - University of Moratuwa"
+
+# JSON Validation Stage
+json_validation:
+  stage: validate
+  image: python:${PYTHON_VERSION}-alpine
+  script:
+    - echo "📋 JSON Validation Stage"
+    - echo "========================"
+
+    # Basic JSON syntax validation
+    - echo "🔍 Validating JSON syntax..."
+    - find ./data -name "*.json" -type f | while read file; do
+        echo "Checking $file...";
+        python3 -m json.tool "$file" > /dev/null && echo "✅ $file is valid" || { echo "❌ $file is invalid"; exit 1; };
+      done
+
+    # Content.json structure validation
+    - echo "📄 Validating content.json structure..."
+    - python3 -c "
+      import json, sys
+      with open('data/content.json') as f: data = json.load(f)
+      required = ['home', 'biography', 'research', 'teaching', 'awards']
+      for section in required:
+          if section not in data:
+              print(f'❌ Missing section: {section}'); sys.exit(1)
+          else:
+              print(f'✅ Section {section} found')
+      print('✅ Content structure valid!')
+      "
+
+    # Teaching.json structure validation
+    - echo "👨‍🏫 Validating teaching.json structure..."
+    - python3 -c "
+      import json, sys
+      with open('data/teaching.json') as f: data = json.load(f)
+      if 'teaching' not in data:
+          print('❌ Missing teaching root'); sys.exit(1)
+      teaching = data['teaching']
+      required = ['summary', 'featured', 'courses', 'categories']
+      for field in required:
+          if field not in teaching:
+              print(f'❌ Missing field: {field}'); sys.exit(1)
+          else:
+              print(f'✅ Field {field} found')
+      print('✅ Teaching structure valid!')
+      "
+
+    # Projects validation
+    - echo "🔬 Validating projects structure..."
+    - python3 -c "
+      import json, sys, os
+      with open('data/projects/projects.json') as f: projects_index = json.load(f)
+      if 'projects' not in projects_index:
+          print('❌ Missing projects array'); sys.exit(1)
+      for project_ref in projects_index['projects']:
+          project_id = project_ref['id']
+          project_file = f'data/projects/{project_id}/project.json'
+          if not os.path.exists(project_file):
+              print(f'❌ Missing: {project_file}'); sys.exit(1)
+          with open(project_file) as f: project_data = json.load(f)
+          required = ['id', 'title', 'shortDescription', 'tags', 'status']
+          for field in required:
+              if field not in project_data:
+                  print(f'❌ Missing {field} in {project_id}'); sys.exit(1)
+          print(f'✅ Project {project_id} valid')
+      print('✅ Projects structure valid!')
+      "
+
+  artifacts:
+    reports:
+      junit: results.xml
+    expire_in: 1 week
+
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "push"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+
+# Code Quality Stage
+code_quality:
+  stage: quality
+  image: node:${NODE_VERSION}-alpine
+  dependencies:
+    - json_validation
+  before_script:
+    - apk add --no-cache python3
+    - npm install -g prettier htmlhint eslint
+  script:
+    - echo "🎨 Code Quality Stage"
+    - echo "===================="
+
+    # Prettier formatting check
+    - echo "🎨 Checking code formatting..."
+    - echo "📄 HTML files..."
+    - find . -name "*.html" -not -path "./node_modules/*" | xargs prettier --check --tab-width 4 --print-width 120
+    - echo "📜 JavaScript files..."
+    - find . -name "*.js" -not -path "./node_modules/*" | xargs prettier --check --tab-width 4 --print-width 120 --single-quote
+    - echo "📋 JSON files..."
+    - find . -name "*.json" -not -path "./node_modules/*" | xargs prettier --check --tab-width 2
+
+    # HTML linting
+    - echo "📄 Linting HTML files..."
+    - find . -name "*.html" -not -path "./node_modules/*" -exec htmlhint {} \;
+
+    # JavaScript linting
+    - echo "📜 Linting JavaScript files..."
+    - cat > .eslintrc.json << 'EOF'
+      {
+        "env": {"browser": true, "es2021": true},
+        "extends": "eslint:recommended",
+        "parserOptions": {"ecmaVersion": 12, "sourceType": "module"},
+        "rules": {"no-unused-vars": "warn", "no-console": "off", "semi": ["error", ";"]}
+      }
+      EOF
+    - find . -name "*.js" -not -path "./node_modules/*" -exec eslint {} \; || echo "⚠️ ESLint warnings"
+
+    # Link checking
+    - echo "🔗 Checking internal links..."
+    - python3 -c "
+      import os, re
+      broken = []
+      for root, dirs, files in os.walk('.'):
+          for file in files:
+              if file.endswith('.html'):
+                  html_file = os.path.join(root, file)
+                  with open(html_file, 'r', encoding='utf-8') as f:
+                      content = f.read()
+                  hrefs = re.findall(r'href=\"([^\"]+)\"', content)
+                  current_dir = os.path.dirname(html_file)
+                  for href in hrefs:
+                      if not href.startswith(('http', 'mailto:', '#')) and not href.startswith('./'):
+                          full_path = os.path.join(current_dir, href)
+                          if not os.path.exists(full_path):
+                              broken.append(f'{html_file}: {href}')
+      if broken:
+          print('⚠️ Potential broken links:')
+          for link in broken: print(f'  {link}')
+      else:
+          print('✅ No broken internal links!')
+      "
+
+  artifacts:
+    reports:
+      codequality: code-quality-report.json
+    expire_in: 1 week
+
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "push"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+
+# Security & Performance Stage
+security_performance:
+  stage: security
+  image: python:${PYTHON_VERSION}-alpine
+  dependencies:
+    - code_quality
+  script:
+    - echo "🔒 Security & Performance Stage"
+    - echo "=============================="
+
+    # Security scan
+    - echo "🔍 Scanning for secrets..."
+    - if grep -r -i "password\|secret\|key\|token" --include="*.js" --include="*.json" --include="*.html" . | grep -v "placeholder\|example\|test"; then
+        echo "⚠️ Potential secrets found!"; exit 1;
+      else
+        echo "✅ No secrets detected!";
+      fi
+
+    # File size check
+    - echo "📊 Checking file sizes..."
+    - find . -name "*.html" -o -name "*.js" -o -name "*.css" | while read file; do
+        size=$(wc -c < "$file");
+        if [ $size -gt 500000 ]; then
+          echo "⚠️ Large file: $file ($size bytes)";
+        fi;
+      done
+
+    # Image optimization check
+    - echo "🖼️ Checking images..."
+    - if [ -d "images" ]; then
+        find images -name "*.jpg" -o -name "*.png" -o -name "*.gif" | while read img; do
+          size=$(wc -c < "$img");
+          if [ $size -gt 2000000 ]; then
+            echo "⚠️ Large image: $img ($size bytes)";
+          fi;
+        done;
+      fi
+
+    - echo "✅ Security & performance checks complete!"
+
+  artifacts:
+    expire_in: 1 week
+
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "push"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+
+# Deployment Stage (Pages)
+pages:
+  stage: deploy
+  image: python:${PYTHON_VERSION}-alpine
+  dependencies:
+    - json_validation
+    - code_quality
+    - security_performance
+  script:
+    - echo "🚀 Deployment Stage"
+    - echo "=================="
+
+    # Test server startup
+    - echo "🧪 Testing server..."
+    - timeout 10s python3 -m http.server 8000 &
+    - sleep 5
+    - apk add --no-cache curl
+    - if curl -f http://localhost:8000/ > /dev/null 2>&1; then
+        echo "✅ Server test passed!";
+      else
+        echo "❌ Server test failed!"; exit 1;
+      fi
+
+    # Prepare public directory for GitLab Pages
+    - mkdir public
+    - cp -r . public/ || true
+    - rm -rf public/.git public/node_modules public/.gitlab-ci.yml
+
+    # Generate deployment report
+    - echo "📋 Generating deployment report..."
+    - cat > public/deployment-report.html << 'EOF'
+      <!DOCTYPE html>
+      <html><head><title>Deployment Report</title></head><body>
+      <h1>🏛️ Academic Website Deployment Report</h1>
+      <h2>Dr. Uthayasanker Thayasivam</h2>
+      <p><strong>University of Moratuwa - Computer Science & Engineering</strong></p>
+      <h3>📊 Statistics</h3>
+      <ul>
+        <li>Build Date: $(date)</li>
+        <li>Commit: $CI_COMMIT_SHA</li>
+        <li>Branch: $CI_COMMIT_REF_NAME</li>
+        <li>Pipeline: $CI_PIPELINE_ID</li>
+      </ul>
+      <h3>✅ Status</h3>
+      <p>All checks passed - Website deployed successfully!</p>
+      </body></html>
+      EOF
+
+    - echo "🎉 Deployment prepared!"
+
+  artifacts:
+    paths:
+      - public
+    expire_in: 30 days
+
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+    - if: $CI_COMMIT_BRANCH == "master"
+
+# Notification Stage
+notify_success:
+  stage: notify
+  image: alpine:latest
+  dependencies:
+    - pages
+  script:
+    - echo "🎉 SUCCESS: Academic Website CI/CD Complete!"
+    - echo "============================================="
+    - echo "🏛️ Dr. Uthayasanker Thayasivam's Research Portfolio"
+    - echo "🌐 University of Moratuwa - Computer Science & Engineering"
+    - echo ""
+    - echo "📊 Pipeline Results:"
+    - echo "✅ JSON Validation: Passed"
+    - echo "✅ Code Quality: Passed"
+    - echo "✅ Security & Performance: Passed"
+    - echo "✅ Deployment: Successful"
+    - echo ""
+    - echo "🚀 Website is live and ready!"
+    - echo "📈 Visit your GitLab Pages URL to view the site"
+
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+    - if: $CI_COMMIT_BRANCH == "master"
+  when: on_success
+
+notify_failure:
+  stage: notify
+  image: alpine:latest
+  script:
+    - echo "❌ FAILED: Academic Website CI/CD Pipeline"
+    - echo "=========================================="
+    - echo "Pipeline ID: $CI_PIPELINE_ID"
+    - echo "Commit: $CI_COMMIT_SHA"
+    - echo "Branch: $CI_COMMIT_REF_NAME"
+    - echo ""
+    - echo "Please check the logs above for detailed error information."
+    - echo "🔧 Common issues:"
+    - echo "  - JSON syntax errors in data files"
+    - echo "  - Code formatting issues (run 'make format')"
+    - echo "  - Missing required fields in JSON structures"
+    - echo "  - Large file sizes or potential security issues"
+
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "push"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  when: on_failure
