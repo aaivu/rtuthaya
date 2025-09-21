@@ -1,0 +1,118 @@
+{
+  "id": "01",
+  "title": "Multilingual Speech Emotion Recognition",
+  "shortDescription": "KuralNet - Advanced multilingual speech emotion recognition system focusing on low-resource Dravidian languages",
+  "image": "data/projects/01/1.jpg",
+  "images": [
+    {
+      "url": "data/projects/01/1.jpg",
+      "caption": "Team Members - Research Group"
+    },
+    {
+      "url": "data/projects/01/2.jpg",
+      "caption": "Project Team"
+    }
+  ],
+  "description": "Speech is a powerful medium that carries not only linguistic content but also paralinguistic cues like emotion and speaker identity. While Speech Emotion Recognition (SER) systems have seen significant progress in high-resource, monolingual settings, their applicability in multilingual contexts—especially for low-resource languages—remains limited. Dravidian languages such as Tamil, Telugu, Kannada, and Malayalam are widely spoken but severely underrepresented in SER research. This lack of representation restricts the development of inclusive emotion-aware systems, particularly in regions where these languages are dominant.",
+  "motivation": "The primary motivation behind this project is to bridge the resource and performance gap in SER for underrepresented languages, with a focus on Tamil. This is addressed through three key research objectives:\n\n**Dataset Creation** – To build a high-quality Tamil emotional speech dataset that includes core emotion classes like Happy, Sad, Angry, Fear, and Neutral.\n\n**Multilingual Benchmarking** – To conduct a large-scale survey of global SER datasets across the top 70 most spoken languages, identifying usable emotional speech corpora in 29 languages.\n\n**Model Development** – To design and train a multilingual SER model that supports Tamil and other Dravidian languages, while maintaining efficiency and cross-lingual generalization suitable for real-world, resource-constrained applications.",
+  "results": {
+    "title": "Result and Impact",
+    "performance": "The experimental results confirm that KuralNet offers strong multilingual generalization and excels particularly in low-resource Dravidian languages. Among the 13 supported languages, KuralNet achieved the highest macro F1-scores and weighted accuracy in Tamil, Kannada, and Malayalam, outperforming established baselines such as Emotion2Vec-Large, XGBoost, and Random Forest. The most notable performance gain was in Kannada, where KuralNet exceeded the macro F1-score of Emotion2Vec-Large by +0.55, showcasing its capability to learn robust emotional patterns even in settings with limited annotated data.",
+    "contributions": [
+      {
+        "title": "EmoTa Dataset",
+        "description": "The first structured and culturally grounded Tamil emotional speech corpus, with high inter-annotator agreement (Fleiss' Kappa = 0.74), provides a crucial resource for future emotion recognition research focused on Tamil speakers in Sri Lanka and beyond."
+      },
+      {
+        "title": "KuralHub Benchmark",
+        "description": "A comprehensive survey and categorization of emotional speech datasets across 29 languages, enabling cross-lingual benchmarking and comparative studies in SER research. The summary table and dataset categorization improve accessibility for researchers working on multilingual or low-resource emotion recognition."
+      }
+    ],
+    "impact": "The outcomes of this work have significant implications for both academic research and real-world applications. For AI Researchers and Developers: KuralNet provides a scalable baseline for multilingual SER and sets a new standard for performance in Dravidian and other low-resource languages. For Industry Applications: By supporting languages like Tamil, Kannada, and Malayalam, KuralNet can be integrated into call centers, mental health tools, language learning platforms, and virtual assistants, enhancing their emotional intelligence and inclusivity."
+  },
+  "awards": [
+    {
+      "title": "Publication at CHiPSAL 2025",
+      "description": "The outcomes of this research were formally recognized through acceptance at a prestigious venue",
+      "details": {
+        "paper_title": "EmoTa: A Tamil Emotional Speech Dataset",
+        "authors": ["Jubeerathan Thevakumar", "Luxshan Thavarasa", "Thanikan Sivatheepan", "Sajeev Kugarajah", "Uthayasanker Thayasivam"],
+        "conference": "First Workshop on Challenges in Processing South Asian Languages (CHiPSAL 2025)",
+        "date": "January 19, 2025",
+        "pages": "193–201",
+        "publisher": "International Committee on Computational Linguistics"
+      }
+    }
+  ],
+  "team": [
+    {
+      "name": "Luxshan Thavarasa",
+      "role": "Lead Researcher",
+      "description": "Focused on Speech Emotion Recognition (SER) for low-resource languages. Bridging deep learning with full-stack development.",
+      "email": "luxshanlux2000@gmail.com",
+      "links": {
+        "scholar": "#",
+        "linkedin": "#",
+        "github": "#"
+      }
+    },
+    {
+      "name": "Jubeerathan Thevakumar",
+      "role": "ML Engineer",
+      "description": "Works on optimizing SER models. Skilled in backend engineering and inference systems.",
+      "email": "jubeerathan@gmail.com",
+      "links": {
+        "scholar": "#",
+        "linkedin": "#",
+        "github": "#"
+      }
+    },
+    {
+      "name": "Thanikan Sivatheepan",
+      "role": "Data Engineer",
+      "description": "Handles preprocessing pipelines and designs dashboards for SER data visualization.",
+      "email": "thanikansiv@gmail.com",
+      "links": {
+        "scholar": "#",
+        "linkedin": "#",
+        "github": "#"
+      }
+    }
+  ],
+  "links": [
+    {
+      "title": "Paper",
+      "url": "https://aclanthology.org/2025.chipsal-1.19.pdf",
+      "icon": "fas fa-file-pdf",
+      "type": "primary"
+    },
+    {
+      "title": "Demo",
+      "url": "#",
+      "icon": "fas fa-play-circle",
+      "type": "secondary"
+    },
+    {
+      "title": "Code Base",
+      "url": "#",
+      "icon": "fab fa-github",
+      "type": "secondary"
+    },
+    {
+      "title": "Report",
+      "url": "#",
+      "icon": "fas fa-file-alt",
+      "type": "secondary"
+    },
+    {
+      "title": "Poster",
+      "url": "#",
+      "icon": "fas fa-image",
+      "type": "secondary"
+    }
+  ],
+  "tags": ["Machine Learning", "NLP", "Speech Recognition", "Multilingual", "Tamil", "Dravidian Languages"],
+  "status": "completed",
+  "startDate": "2024-01-01",
+  "endDate": "2025-01-19"
+}

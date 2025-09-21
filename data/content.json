@@ -1,0 +1,142 @@
+{
+  "home": {
+    "title": "Dr. Uthayasanker Thayasivam",
+    "subtitle": "Department of Computer Science & Engineering",
+    "university": "University of Moratuwa, Sri Lanka",
+    "content": "<div class='flex flex-col md:flex-row items-start gap-6'><div class='w-full md:w-1/3'><img src='images/sir.png' alt='Dr. Uthayasanker Thayasivam' class='rounded-lg shadow-lg w-full h-auto' onerror='this.style.display=\"none\"'></div><div class='w-full md:w-2/3'><p class='text-lg text-gray-700 leading-relaxed mb-4'>I am an experienced engineer, currently lecturing at the Department of Computer Science & Engineering, University of Moratuwa, Sri Lanka, and have taken on the role of <strong>Head of the Department of Computer Science and Engineering</strong>. After completing my Bachelor's degree in Electronics & Telecommunication Engineering at the University of Moratuwa, I obtained my doctoral degree in semantic computing from the University of Georgia, USA. My research interest includes</p><ul class='list-disc list-inside text-gray-700 space-y-2 mb-4'><li>Natural Language Processing,</li><li>Advanced Machine Learning, and</li><li>Advanced Data Science.</li></ul><p class='text-gray-700'>I have industrial experience from globally reputed Information Retrieval organizations: Google, Microsoft, Ask.com, and Glassdoor. I am an active member of both the <strong>\"Natural Language Processing Centre\"</strong> and the <strong>\"Data Science, Engineering and Analytics Research Hub\"</strong> of the University of Moratuwa.</p></div></div>"
+  },
+  "biography": {
+    "title": "Biography",
+    "content": "<p class='text-gray-700 mb-4'>Dr. Uthayasanker Thayasivam is a distinguished academic and researcher in the field of Computer Science & Engineering. He currently serves as the Head of the Department of Computer Science and Engineering at the University of Moratuwa, Sri Lanka.</p><p class='text-gray-700 mb-4'>His academic journey began with a Bachelor's degree in Electronics & Telecommunication Engineering from the University of Moratuwa, followed by a doctoral degree in semantic computing from the University of Georgia, USA.</p><p class='text-gray-700 mb-6'>With extensive industrial experience at leading technology companies including Google, Microsoft, Ask.com, and Glassdoor, Dr. Thayasivam brings a unique blend of academic excellence and practical industry knowledge to his research and teaching.</p><div class='text-center'><a href='biography.html' class='read-more-btn bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 shadow-md hover:shadow-lg inline-block'>Read Full Biography</a></div>",
+    "detailed": {
+      "early_childhood": {
+        "title": "Early Childhood",
+        "content": "I was born in Jaffna, a city which had to, directly and quite incessantly, confront the effects of the civil war that had ravaged the island for more than three decades. Despite my childhood having been such a rough patch, in retrospect it had always been memorable and surprisingly cheerful. Akin to the silver lining in each cloud, growing in such rough conditions made me focus more on my education. My parents insisted the importance of learning despite the shortcomings I was protractedly bound to deal with. Till my teenage years, I even had to study under the faint light scattered by oil lamps. However, I enjoyed learning despite all the hardships. I took an eminent liking to mathematics and Tamil language. During this time, my dad used to regularly share with us his work experience as a government medical officer operating all around the island. He never failed to point out to us, that we are surrounded by good people and how such people have been of immense help both in his personal and professional life. Thus far, these stories have had a great influence on me and now I share some of these stories with my son."
+      },
+      "high_school": {
+        "title": "High School",
+        "content": "In the late nineties (1998) our family moved to Colombo. I joined Hindu College Colombo (HCC) while I was reading grade 10. Teachers at HCC spotted various talents in me and molded me into a leader. Within just a year at my new school, I was actively involved in drama, debates and hockey. Specifically, I performed extremely well in debates and won roughly 32 champion trophies during my time at school. I was appointed as the head prefect of the college which gave me a lifetime of memorable experience in leading 32 smart young men for the betterment of our school. The year I headed the prefect's guild also happened to be the golden jubilee year of the college, owing to which we were granted with the opportunity of organizing jubilee walk, jubilee exhibition and jubilee grand cultural day in addition to regular school functions such as prize giving, sports meet, teacher's day, etc. The task of organizing these events consumed significant time. Hence my teachers and well-wishers constantly reminded me the importance of advanced level examinations that were round the corner. With their guidance and the support from some of my close friends, I was able to manage both my studies and extra curricular activities and achieve good grades in advanced level examinations adequate to confer on me an admission to the University of Moratuwa with merits."
+      },
+      "undergraduate": {
+        "title": "Undergraduate Studies",
+        "content": "My 4 years at Moratuwa, learning electronics and telecommunication engineering was very different from my time at high school. This was mainly due to the self-learning required in an university environment was relatively higher than that required for high schools. Fortunately for me, 3 of my very good friends from school ended up with me in the same degree program. During this time not only our friendship strengthened, but it also helped me remarkably in my academic activities as well. As a result of this, three of us graduated with first class and one with second upper. Though it was undeniably enjoyable and memorable, I wouldn't say that this was equally enjoyable as my school days. I felt that my undergraduate studies pressurized me more than what was generally called for. As a result of this, I wanted to create a more conducive environment for my students. I tried to reduce the unwanted stress caused in an undergraduate course by improving clarity and providing necessary resources. Though I studied electronics and telecommunications as my major, I have always enjoyed computer engineering subjects. Hence, I ended up assuming a computer science and engineering career later."
+      },
+      "working_experience": {
+        "title": "Brief Working Experience",
+        "content": "Right after my graduation, I was hired as a software engineer at Millennium Information Technology limited, one of the leading software companies at that time. I was able to impress my team leaders with my expeditiously problem-solving skills. I realized the importance of the extracurricular activities I had done during school time. The skills I had developed due to the extracurricular activities enabled me to distinguish myself from the other engineers promptly. This helped me grow in my career relatively faster."
+      },
+      "doctoral_inspiration": {
+        "title": "Inspiration from working with Doctoral",
+        "content": "One year later, I joined a research engineering team which worked on \"information retrieval\" products. This team was composed of several doctoral degree holders. I cherished the mentorship I obtained during this time from the senior engineers with doctoral degrees. They were humble, yet smart. The manner in which they explained concepts and phenomena were remarkable. The solutions they came up with were simple but effective. I was tremendously inspired by them. This led me to pursue a doctoral degree with the aspiration that doing so will assist me achieve such an exemplary personality."
+      },
+      "doctoral_degree": {
+        "title": "Doctoral Degree",
+        "content": "I applied to several north American universities to follow a doctoral program in computer science. I was offered an opportunity to pursue a doctoral degree in computer science at University of Georgia USA. I was also provided a scholarship along with the admission. I was lucky to have had Prof. Prashant Doshi, a great researcher, as my supervisor. He showed me the manner to analyze computer science problems, which was entirely different to the previous approaches I adopted. The time I spent as a doctoral student under his supervision enabled me to take up the challenging engineering and scientific problems in the field of semantic computing. During this tenor I published three research papers in an esteemed American Artificial Intelligence conference and a journal in a highly respected Journal of Artificial Intelligence. He bestowed on me several opportunities to co teach his subjects and co review some conferences for which he served as a member of the program committee. This paved my path to become a stronger researcher in the field of artificial intelligence. During this time, I interned at Google and Accenture Tech Labs, some of the leading artificial intelligence tech companies in the world. I was awarded both outstanding graduate student of the year and graduate student fellowship. One of my most cherished memories during my tenure at Google is the time I spent with Prof. Peter Norvig, head of Google research, who is also known as the father of modern AI."
+      },
+      "silicon_valley": {
+        "title": "Working in Silicon Valley",
+        "content": "I completed my doctoral degree in 2013 and joined an old and famous information retrieval company called Ask Jeeves, founded by the famous natural language scientist Jeeves. Until 2017, I worked in various companies which allowed me to gain profuse experience in technology and ability to manage researchers. I was able to evolve into a senior manager within the first couple of years of my career. I further gained ample experience in cutting edge technologies in fields of Big Data, Data Science and Machine Learning. This proved to be of profound value for my teaching since I generally associate my personal experience with teaching."
+      },
+      "dream_true": {
+        "title": "Dream comes True",
+        "content": "I was always passionate about coming back to Sri Lanka and serving the country. Late Mr. Lalith Athulathmudali is a great inspiration for me. I was awarded the Mahapola scholarship which was founded by Late Mr. Lalith Athulathmudali. This instilled in me the concept of \"Giving Back to the country\". Even before I went to the USA I was interested in coming back to Sri Lanka to settle down. I may not have owned the dream of becoming an academic. However, with time I realized my passion for teaching and working in the field of computer science and engineering as a researcher. The skills I developed as a researcher and the hands-on experience I gained during my industrial encounter in the USA fuelled me to perform as a lecturer. I thoroughly enjoy my time as a lecturer at the university I studied."
+      }
+    }
+  },
+  "research": {
+    "title": "Research Areas",
+    "items": [
+      {
+        "title": "Natural Language Processing",
+        "description": "Advanced research in computational linguistics and language understanding systems",
+        "link": "#"
+      },
+      {
+        "title": "Advanced Machine Learning",
+        "description": "Cutting-edge machine learning algorithms and their applications",
+        "link": "#"
+      },
+      {
+        "title": "Advanced Data Science",
+        "description": "Data mining, analytics, and knowledge discovery from large datasets",
+        "link": "#"
+      },
+      {
+        "title": "Semantic Computing",
+        "description": "Research in semantic web technologies and knowledge representation",
+        "link": "#"
+      }
+    ]
+  },
+  "teaching": {
+    "title": "Teaching",
+    "subtitle": "University of Moratuwa",
+    "undergraduate": {
+      "title": "Undergraduate",
+      "courses": [
+        "Data Structures and Algorithms",
+        "Information Retrieval",
+        "Machine Learning",
+        "Presentation Skills"
+      ]
+    },
+    "postgraduate": {
+      "title": "Postgraduate",
+      "courses": [
+        "Advanced Database Systems",
+        "Statistical Inference",
+        "Machine Learning",
+        "Big Data"
+      ]
+    }
+  },
+  "awards": {
+    "title": "Awards & Grants",
+    "grants": [
+      {
+        "title": "Senate Research Committee Long Term Grant 2019",
+        "description": "Leading an impactful project titled \"Neural Machine Translation for Low Resourced Languages: Sinhala & Tamil\" under Grant No. SRC/LT/2019/29 commenced in April 2019"
+      },
+      {
+        "title": "Senate Research Committee Short Term Grant 2018",
+        "description": "Co-Principal Investigator with Dr. Amal Shehan Perera & Dr. Surangika Ranathunga"
+      },
+      {
+        "title": "AHEAD Grants funded by World Bank",
+        "description": "Joint initiative between the Sri Lankan government and the World Bank, known as the AHEAD program, strives to elevate Sri Lanka from a Lower-Middle Income Country to an Upper Middle-Income Country"
+      }
+    ],
+    "awards": [
+      {
+        "title": "NLPIR 2021 Best Presentation Award",
+        "description": "Featured sessions covering a wide range of topics from natural language analysis and processing to sentiment analysis and information retrieval. Co-Authored with Kumaran Kugathasan"
+      },
+      {
+        "title": "E-Swabhimani award for machine translation application SiTa",
+        "description": "Online tool that utilizes a custom-built Tamil Word Embedding model to generate various morphological forms of Tamil words, preserving and promoting the language in the digital space"
+      },
+      {
+        "title": "Outstanding Research Performance Award",
+        "description": "Recognition given to academic staff at the University of Moratuwa for their exceptional contributions and achievements in the field of research. Honored with this award for five consecutive years, from 2018 to 2022"
+      },
+      {
+        "title": "Best Project Award 2017 - IIT Hyderabad",
+        "description": "Awarded for the project, \"Beyond Word2Vec-Embedding Words and Phrases in Same Vector Space\" created by T.Uthayasanker, Vaishali Gupta, and Yash Kumar"
+      }
+    ],
+    "leadership": [
+      {
+        "title": "DataSEARCH Director",
+        "description": "DataSEARCH, a pioneering research center at the esteemed University of Moratuwa, is on a mission to lead innovative research in data science, engineering, and analytics. Director since February 2023"
+      },
+      {
+        "title": "AWS University Ambassador",
+        "description": "Got a place in the 2020 cohort of the AWS Educate Cloud Ambassador Program as a Faculty Ambassador. Ambassador for three consecutive years (2019-2021)"
+      },
+      {
+        "title": "IEEE Senior Member",
+        "description": "An esteemed honor reserved for the senior members who have made substantial contributions to their profession. Senior member since June 2022"
+      }
+    ]
+  }
+}

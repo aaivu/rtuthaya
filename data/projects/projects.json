@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "id": "01",
+      "featured": true
+    },
+    {
+      "id": "02",
+      "featured": true
+    },
+    {
+      "id": "03",
+      "featured": true
+    }
+  ]
+}

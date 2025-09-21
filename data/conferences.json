@@ -1,0 +1,214 @@
+{
+  "conferences": [
+    {
+      "acronym": "AISTATS",
+      "name": "International Conference on Artificial Intelligence and Statistics",
+      "location": "Valencia, Spain",
+      "submissionDate": "2024-10-11",
+      "conferenceDate": "2025-04-15",
+      "topics": ["Artificial Intelligence", "Data Science", "Machine Learning"],
+      "website": "https://aistats.org/",
+      "type": "conference"
+    },
+    {
+      "acronym": "CVPR",
+      "name": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "location": "Nashville, TN, USA",
+      "submissionDate": "2024-11-27",
+      "conferenceDate": "2025-06-11",
+      "topics": ["Artificial Intelligence", "Data Science", "Machine Learning"],
+      "website": "https://cvpr.thecvf.com/",
+      "type": "conference"
+    },
+    {
+      "acronym": "NAACL",
+      "name": "Annual Conference of the North American Chapter of the Association for Computational Linguistics",
+      "location": "Albuquerque, USA",
+      "submissionDate": "2024-10-15",
+      "conferenceDate": "2025-04-29",
+      "topics": ["Artificial Intelligence", "Data Science", "Machine Learning"],
+      "website": "https://naacl.org/",
+      "type": "conference"
+    },
+    {
+      "acronym": "ICASSP",
+      "name": "IEEE International Conference on Acoustics, Speech and Signal Processing",
+      "location": "Hyderabad, India",
+      "submissionDate": "2024-10-15",
+      "conferenceDate": "2025-04-06",
+      "topics": ["Artificial Intelligence", "Data Science", "Machine Learning"],
+      "website": "https://2025.ieeeicassp.org/",
+      "type": "conference"
+    },
+    {
+      "acronym": "COLING",
+      "name": "International Conference on Computational Linguistics",
+      "location": "Abu Dhabi, UAE",
+      "submissionDate": "2024-09-14",
+      "conferenceDate": "2025-01-19",
+      "topics": ["Artificial Intelligence", "Data Science", "Machine Learning"],
+      "website": "https://coling2025.org/",
+      "type": "conference"
+    },
+    {
+      "acronym": "WACV",
+      "name": "IEEE Winter Conference on Applications of Computer Vision",
+      "location": "Waikoloa, Hawaii",
+      "submissionDate": "2024-08-29",
+      "conferenceDate": "2025-01-10",
+      "topics": ["Image Processing", "Computer Vision"],
+      "website": "https://wacv2025.thecvf.com/",
+      "type": "conference"
+    },
+    {
+      "acronym": "ACL",
+      "name": "Annual Meeting of the Association for Computational Linguistics",
+      "location": "Vienna, Austria",
+      "submissionDate": "2025-02-15",
+      "conferenceDate": "2025-07-27",
+      "topics": ["Artificial Intelligence", "Data Science", "Machine Learning"],
+      "website": "https://2025.aclweb.org/",
+      "type": "conference"
+    },
+    {
+      "acronym": "INTERSPEECH",
+      "name": "Annual Conference of the International Speech Communication Association",
+      "location": "Rotterdam, The Netherlands",
+      "submissionDate": "2025-02-12",
+      "conferenceDate": "2025-08-17",
+      "topics": ["Artificial Intelligence", "Data Science", "Machine Learning"],
+      "website": "https://interspeech2025.org/",
+      "type": "conference"
+    },
+    {
+      "acronym": "INLG",
+      "name": "International Natural Language Generation Conference",
+      "location": "Vietnam",
+      "submissionDate": "2025-05-15",
+      "conferenceDate": "2025-09-15",
+      "topics": ["Artificial Intelligence", "Data Science", "Machine Learning"],
+      "website": "https://inlg2025.github.io/",
+      "type": "conference"
+    },
+    {
+      "acronym": "NLPCC",
+      "name": "International Conference on Natural Language Processing and Chinese Computing",
+      "location": "Beijing, China",
+      "submissionDate": "2025-05-15",
+      "conferenceDate": "2025-10-10",
+      "topics": ["Artificial Intelligence", "Data Science", "Machine Learning"],
+      "website": "http://tcci.ccf.org.cn/conference/2025/",
+      "type": "conference"
+    },
+    {
+      "acronym": "ICCV",
+      "name": "IEEE/CVF International Conference on Computer Vision",
+      "location": "Singapore",
+      "submissionDate": "2025-03-08",
+      "conferenceDate": "2025-10-11",
+      "topics": ["Artificial Intelligence", "Data Science", "Machine Learning"],
+      "website": "https://iccv2025.thecvf.com/",
+      "type": "conference"
+    },
+    {
+      "acronym": "ArabicNLP",
+      "name": "Arabic Natural Language Processing Conference",
+      "location": "TBA",
+      "submissionDate": "2025-06-15",
+      "conferenceDate": "2025-10-15",
+      "topics": ["Artificial Intelligence", "Data Science", "Machine Learning"],
+      "website": "https://arabicnlp.org/",
+      "type": "conference"
+    },
+    {
+      "acronym": "EMNLP",
+      "name": "Conference on Empirical Methods in Natural Language Processing",
+      "location": "Suzhou, China",
+      "submissionDate": "2025-06-18",
+      "conferenceDate": "2025-11-05",
+      "topics": ["Artificial Intelligence", "Data Science", "Machine Learning"],
+      "website": "https://2025.emnlp.org/",
+      "type": "conference"
+    },
+    {
+      "acronym": "NLLP",
+      "name": "Workshop on Natural Legal Language Processing",
+      "location": "Suzhou, China (with EMNLP 2025)",
+      "submissionDate": "2025-08-15",
+      "conferenceDate": "2025-11-05",
+      "topics": ["Artificial Intelligence", "Data Science", "Machine Learning"],
+      "website": "https://nllpw.org/workshop/nllp2025/",
+      "type": "workshop"
+    },
+    {
+      "acronym": "ASRU",
+      "name": "IEEE Automatic Speech Recognition and Understanding Workshop",
+      "location": "Cambridge, UK",
+      "submissionDate": "2025-06-01",
+      "conferenceDate": "2025-12-08",
+      "topics": ["Artificial Intelligence", "Data Science", "Machine Learning"],
+      "website": "https://asru2025.org/",
+      "type": "workshop"
+    },
+    {
+      "acronym": "SLT",
+      "name": "IEEE Spoken Language Technology Workshop",
+      "location": "Milan, Italy",
+      "submissionDate": "2025-07-15",
+      "conferenceDate": "2025-12-15",
+      "topics": ["Artificial Intelligence", "Data Science", "Machine Learning"],
+      "website": "https://slt2025.org/",
+      "type": "workshop"
+    },
+    {
+      "acronym": "ICLR",
+      "name": "International Conference on Learning Representations",
+      "location": "Athens, Greece",
+      "submissionDate": "2025-09-24",
+      "conferenceDate": "2026-02-12",
+      "topics": ["Artificial Intelligence", "Data Science", "Machine Learning"],
+      "website": "https://iclr.cc/Conferences/2026",
+      "type": "conference"
+    },
+    {
+      "acronym": "ECCV",
+      "name": "European Conference on Computer Vision",
+      "location": "Vienna, Austria",
+      "submissionDate": "2026-03-07",
+      "conferenceDate": "2026-10-12",
+      "topics": ["Artificial Intelligence", "Data Science", "Machine Learning"],
+      "website": "https://eccv2026.ecva.net/",
+      "type": "conference"
+    },
+    {
+      "acronym": "CoNLL",
+      "name": "Conference on Computational Natural Language Learning",
+      "location": "Vienna, Austria",
+      "submissionDate": "2025-03-14",
+      "conferenceDate": "2025-07-31",
+      "topics": ["Artificial Intelligence", "Data Science", "Machine Learning"],
+      "website": "https://conll.org/",
+      "type": "conference"
+    },
+    {
+      "acronym": "ACL-IJCNLP",
+      "name": "Joint Conference of the Association for Computational Linguistics and the International Joint Conference on Natural Language Processing",
+      "location": "Mumbai, India",
+      "submissionDate": "2025-07-28",
+      "conferenceDate": "2025-12-20",
+      "topics": ["Artificial Intelligence", "Data Science", "Machine Learning"],
+      "website": "https://acl-ijcnlp2025.org/",
+      "type": "conference"
+    },
+    {
+      "acronym": "EACL",
+      "name": "Conference of the European Chapter of the Association for Computational Linguistics",
+      "location": "Madrid, Spain",
+      "submissionDate": "2023-10-15",
+      "conferenceDate": "2026-03-10",
+      "topics": ["Artificial Intelligence", "Data Science", "Machine Learning"],
+      "website": "https://eacl.org/",
+      "type": "conference"
+    }
+  ]
+}
