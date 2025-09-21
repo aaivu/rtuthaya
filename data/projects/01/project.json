@@ -36,7 +36,13 @@
       "description": "The outcomes of this research were formally recognized through acceptance at a prestigious venue",
       "details": {
         "paper_title": "EmoTa: A Tamil Emotional Speech Dataset",
-        "authors": ["Jubeerathan Thevakumar", "Luxshan Thavarasa", "Thanikan Sivatheepan", "Sajeev Kugarajah", "Uthayasanker Thayasivam"],
+        "authors": [
+          "Jubeerathan Thevakumar",
+          "Luxshan Thavarasa",
+          "Thanikan Sivatheepan",
+          "Sajeev Kugarajah",
+          "Uthayasanker Thayasivam"
+        ],
         "conference": "First Workshop on Challenges in Processing South Asian Languages (CHiPSAL 2025)",
         "date": "January 19, 2025",
         "pages": "193–201",
@@ -111,7 +117,14 @@
       "type": "secondary"
     }
   ],
-  "tags": ["Machine Learning", "NLP", "Speech Recognition", "Multilingual", "Tamil", "Dravidian Languages"],
+  "tags": [
+    "Machine Learning",
+    "NLP",
+    "Speech Recognition",
+    "Multilingual",
+    "Tamil",
+    "Dravidian Languages"
+  ],
   "status": "completed",
   "startDate": "2024-01-01",
   "endDate": "2025-01-19"

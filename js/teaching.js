@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', async function() {
+document.addEventListener('DOMContentLoaded', async function () {
     // Mobile menu functionality
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileNavMenu = document.getElementById('mobile-nav-menu');
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Search functionality
     const searchInput = document.getElementById('search-input');
     if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
+        searchInput.addEventListener('input', e => {
             searchCourses(e.target.value);
         });
     }
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 let allCourses = [];
 let filteredCourses = [];
 let currentFilter = 'all';
-let selectedCategories = new Set();
+const selectedCategories = new Set();
 
 async function loadTeachingData() {
     const loadingElement = document.getElementById('loading');
@@ -57,7 +57,6 @@ async function loadTeachingData() {
         // Sort and display courses
         sortCourses();
         displayCourses(filteredCourses);
-
     } catch (error) {
         console.error('Error loading teaching data:', error);
         loadingElement.classList.add('hidden');
@@ -94,17 +93,23 @@ function displaySummaryStats(summary) {
                 <div class="bg-white rounded-xl p-4 shadow-sm">
                     <h4 class="font-semibold text-gray-800 mb-3">Degree Programs</h4>
                     <div class="flex flex-wrap gap-2">
-                        ${summary.degrees.map(degree =>
-                            `<span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">${degree}</span>`
-                        ).join('')}
+                        ${summary.degrees
+        .map(
+            degree =>
+                `<span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">${degree}</span>`
+        )
+        .join('')}
                     </div>
                 </div>
                 <div class="bg-white rounded-xl p-4 shadow-sm">
                     <h4 class="font-semibold text-gray-800 mb-3">Teaching Roles</h4>
                     <div class="flex flex-wrap gap-2">
-                        ${summary.roles.map(role =>
-                            `<span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">${role}</span>`
-                        ).join('')}
+                        ${summary.roles
+        .map(
+            role =>
+                `<span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">${role}</span>`
+        )
+        .join('')}
                     </div>
                 </div>
             </div>
@@ -115,14 +120,16 @@ function displaySummaryStats(summary) {
 function generateCategoryFilters(categories) {
     const categoriesContainer = document.getElementById('categories-container');
 
-    const categoryButtons = Object.keys(categories).map(category => {
-        const categoryData = categories[category];
-        const colorClass = getCategoryColorClass(categoryData.color);
-        return `<button onclick="toggleCategoryFilter('${category}')"
+    const categoryButtons = Object.keys(categories)
+        .map(category => {
+            const categoryData = categories[category];
+            const colorClass = getCategoryColorClass(categoryData.color);
+            return `<button onclick="toggleCategoryFilter('${category}')"
                         class="category-chip px-3 py-1 rounded-full text-xs font-medium ${colorClass.bg} ${colorClass.text} hover:opacity-80 transition-all cursor-pointer">
                     <i class="${categoryData.icon} mr-1"></i>${category} (${categoryData.count})
                 </button>`;
-    }).join('');
+        })
+        .join('');
 
     categoriesContainer.innerHTML = `
         <span class="text-sm font-medium text-gray-700">Categories:</span>
@@ -132,17 +139,17 @@ function generateCategoryFilters(categories) {
 
 function getCategoryColorClass(color) {
     const colorMap = {
-        'blue': { bg: 'bg-blue-100', text: 'text-blue-700' },
-        'green': { bg: 'bg-green-100', text: 'text-green-700' },
-        'purple': { bg: 'bg-purple-100', text: 'text-purple-700' },
-        'orange': { bg: 'bg-orange-100', text: 'text-orange-700' },
-        'gray': { bg: 'bg-gray-100', text: 'text-gray-700' },
-        'red': { bg: 'bg-red-100', text: 'text-red-700' },
-        'indigo': { bg: 'bg-indigo-100', text: 'text-indigo-700' },
-        'pink': { bg: 'bg-pink-100', text: 'text-pink-700' },
-        'yellow': { bg: 'bg-yellow-100', text: 'text-yellow-700' },
-        'teal': { bg: 'bg-teal-100', text: 'text-teal-700' },
-        'cyan': { bg: 'bg-cyan-100', text: 'text-cyan-700' }
+        blue: { bg: 'bg-blue-100', text: 'text-blue-700' },
+        green: { bg: 'bg-green-100', text: 'text-green-700' },
+        purple: { bg: 'bg-purple-100', text: 'text-purple-700' },
+        orange: { bg: 'bg-orange-100', text: 'text-orange-700' },
+        gray: { bg: 'bg-gray-100', text: 'text-gray-700' },
+        red: { bg: 'bg-red-100', text: 'text-red-700' },
+        indigo: { bg: 'bg-indigo-100', text: 'text-indigo-700' },
+        pink: { bg: 'bg-pink-100', text: 'text-pink-700' },
+        yellow: { bg: 'bg-yellow-100', text: 'text-yellow-700' },
+        teal: { bg: 'bg-teal-100', text: 'text-teal-700' },
+        cyan: { bg: 'bg-cyan-100', text: 'text-cyan-700' }
     };
     return colorMap[color] || { bg: 'bg-gray-100', text: 'text-gray-700' };
 }
@@ -254,13 +261,13 @@ function getCategoryColor(category) {
         'Data Science': { bg: 'bg-green-50', text: 'text-green-600' },
         'AI & NLP': { bg: 'bg-purple-50', text: 'text-purple-600' },
         'Big Data': { bg: 'bg-orange-50', text: 'text-orange-600' },
-        'Programming': { bg: 'bg-gray-50', text: 'text-gray-600' },
-        'Analytics': { bg: 'bg-red-50', text: 'text-red-600' },
-        'Statistics': { bg: 'bg-indigo-50', text: 'text-indigo-600' },
-        'Research': { bg: 'bg-pink-50', text: 'text-pink-600' },
+        Programming: { bg: 'bg-gray-50', text: 'text-gray-600' },
+        Analytics: { bg: 'bg-red-50', text: 'text-red-600' },
+        Statistics: { bg: 'bg-indigo-50', text: 'text-indigo-600' },
+        Research: { bg: 'bg-pink-50', text: 'text-pink-600' },
         'Information Systems': { bg: 'bg-yellow-50', text: 'text-yellow-600' },
         'Business Intelligence': { bg: 'bg-teal-50', text: 'text-teal-600' },
-        'Projects': { bg: 'bg-cyan-50', text: 'text-cyan-600' }
+        Projects: { bg: 'bg-cyan-50', text: 'text-cyan-600' }
     };
     return colors[category] || { bg: 'bg-gray-50', text: 'text-gray-600' };
 }
@@ -268,15 +275,15 @@ function getCategoryColor(category) {
 function getRoleColor(role) {
     const colors = {
         'Main Examiner': { bg: 'bg-green-100', text: 'text-green-800' },
-        'Moderator': { bg: 'bg-blue-100', text: 'text-blue-800' },
+        Moderator: { bg: 'bg-blue-100', text: 'text-blue-800' },
         'Co Examiner': { bg: 'bg-yellow-100', text: 'text-yellow-800' },
-        'Evaluator': { bg: 'bg-purple-100', text: 'text-purple-800' }
+        Evaluator: { bg: 'bg-purple-100', text: 'text-purple-800' }
     };
     return colors[role] || { bg: 'bg-gray-100', text: 'text-gray-800' };
 }
 
 // Filter functions
-window.filterCourses = function(filterType) {
+window.filterCourses = function (filterType) {
     currentFilter = filterType;
 
     // Update active filter button
@@ -288,7 +295,7 @@ window.filterCourses = function(filterType) {
     applyFilters();
 };
 
-window.toggleCategoryFilter = function(category) {
+window.toggleCategoryFilter = function (category) {
     const button = event.target.closest('.category-chip');
 
     if (selectedCategories.has(category)) {
@@ -306,27 +313,25 @@ function applyFilters() {
     let filtered = [...allCourses];
 
     // Apply level/role filter
-    switch(currentFilter) {
-        case 'undergraduate':
-            filtered = filtered.filter(course => course.level === 'Undergraduate');
-            break;
-        case 'postgraduate':
-            filtered = filtered.filter(course => course.level === 'Postgraduate');
-            break;
-        case 'main_examiner':
-            filtered = filtered.filter(course => course.role === 'Main Examiner');
-            break;
-        case 'moderator':
-            filtered = filtered.filter(course => course.role === 'Moderator');
-            break;
+    switch (currentFilter) {
+    case 'undergraduate':
+        filtered = filtered.filter(course => course.level === 'Undergraduate');
+        break;
+    case 'postgraduate':
+        filtered = filtered.filter(course => course.level === 'Postgraduate');
+        break;
+    case 'main_examiner':
+        filtered = filtered.filter(course => course.role === 'Main Examiner');
+        break;
+    case 'moderator':
+        filtered = filtered.filter(course => course.role === 'Moderator');
+        break;
         // 'all' case - no additional filtering
     }
 
     // Apply category filter
     if (selectedCategories.size > 0) {
-        filtered = filtered.filter(course =>
-            selectedCategories.has(course.category)
-        );
+        filtered = filtered.filter(course => selectedCategories.has(course.category));
     }
 
     filteredCourses = filtered;
@@ -342,12 +347,13 @@ function searchCourses(query) {
     }
 
     const searchTerm = query.toLowerCase();
-    const searchResults = filteredCourses.filter(course =>
-        course.name.toLowerCase().includes(searchTerm) ||
-        course.code.toLowerCase().includes(searchTerm) ||
-        course.degree.toLowerCase().includes(searchTerm) ||
-        course.category.toLowerCase().includes(searchTerm) ||
-        course.intake.toLowerCase().includes(searchTerm)
+    const searchResults = filteredCourses.filter(
+        course =>
+            course.name.toLowerCase().includes(searchTerm) ||
+            course.code.toLowerCase().includes(searchTerm) ||
+            course.degree.toLowerCase().includes(searchTerm) ||
+            course.category.toLowerCase().includes(searchTerm) ||
+            course.intake.toLowerCase().includes(searchTerm)
     );
 
     displayCourses(searchResults);

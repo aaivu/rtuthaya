@@ -1,189 +1,414 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complete Biography - Dr. Uthayasanker Thayasivam</title>
-    <link rel="icon" type="image/png" href="images/sir.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Active nav link indicator */
-        .nav-link.active {
-            color: #2563eb;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: #2563eb;
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-
-        .nav-link.active::after,
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        /* Fade-in animation */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 0.8s ease forwards;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Complete Biography - Dr. Uthayasanker Thayasivam</title>
+        <link rel="icon" type="image/png" href="images/sir.png" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            /* Smooth scrolling */
+            html {
+                scroll-behavior: smooth;
             }
-        }
 
-        /* Staggered animation */
-        .fade-in:nth-child(1) { animation-delay: 0.1s; }
-        .fade-in:nth-child(2) { animation-delay: 0.2s; }
-        .fade-in:nth-child(3) { animation-delay: 0.3s; }
-        .fade-in:nth-child(4) { animation-delay: 0.4s; }
-        .fade-in:nth-child(5) { animation-delay: 0.5s; }
-        .fade-in:nth-child(6) { animation-delay: 0.6s; }
-        .fade-in:nth-child(7) { animation-delay: 0.7s; }
-        .fade-in:nth-child(8) { animation-delay: 0.8s; }
-    </style>
-</head>
-<body class="bg-gray-50">
-    <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
-        <nav class="max-w-6xl mx-auto px-4 py-4">
-            <div class="flex justify-between items-center md:justify-center">
-                <button id="mobile-menu-btn" class="md:hidden focus:outline-none p-2 rounded-lg hover:bg-gray-100 transition-colors">
-                    <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-                <ul id="nav-menu" class="hidden md:flex md:space-x-8 text-sm font-medium">
-                    <li><a href="index.html#home" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative">Home</a></li>
-                    <li><a href="biography.html" class="nav-link text-blue-600 font-semibold transition-all duration-300 uppercase tracking-wider py-2 px-1 relative">Biography</a></li>
-                    <li><a href="index.html#teaching" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative">Teaching</a></li>
-                    <li><a href="projects.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative">Projects</a></li>
-                    <li><a href="index.html#awards" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative">Awards</a></li>
-                    <li><a href="https://scholar.google.com/citations?user=N5tisn4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative">Publications</a></li>
-                    <li><a href="index.html#research" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative">Research</a></li>
+            /* Active nav link indicator */
+            .nav-link.active {
+                color: #2563eb;
+            }
+
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 0;
+                height: 2px;
+                background: #2563eb;
+                transition: all 0.3s ease;
+                transform: translateX(-50%);
+            }
+
+            .nav-link.active::after,
+            .nav-link:hover::after {
+                width: 100%;
+            }
+
+            /* Fade-in animation */
+            .fade-in {
+                opacity: 0;
+                transform: translateY(20px);
+                animation: fadeIn 0.8s ease forwards;
+            }
+
+            @keyframes fadeIn {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* Staggered animation */
+            .fade-in:nth-child(1) {
+                animation-delay: 0.1s;
+            }
+            .fade-in:nth-child(2) {
+                animation-delay: 0.2s;
+            }
+            .fade-in:nth-child(3) {
+                animation-delay: 0.3s;
+            }
+            .fade-in:nth-child(4) {
+                animation-delay: 0.4s;
+            }
+            .fade-in:nth-child(5) {
+                animation-delay: 0.5s;
+            }
+            .fade-in:nth-child(6) {
+                animation-delay: 0.6s;
+            }
+            .fade-in:nth-child(7) {
+                animation-delay: 0.7s;
+            }
+            .fade-in:nth-child(8) {
+                animation-delay: 0.8s;
+            }
+        </style>
+    </head>
+    <body class="bg-gray-50">
+        <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+            <nav class="max-w-6xl mx-auto px-4 py-4">
+                <div class="flex justify-between items-center md:justify-center">
+                    <button
+                        id="mobile-menu-btn"
+                        class="md:hidden focus:outline-none p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                    >
+                        <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"
+                            ></path>
+                        </svg>
+                    </button>
+                    <ul id="nav-menu" class="hidden md:flex md:space-x-8 text-sm font-medium">
+                        <li>
+                            <a
+                                href="index.html#home"
+                                class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative"
+                            >
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="biography.html"
+                                class="nav-link text-blue-600 font-semibold transition-all duration-300 uppercase tracking-wider py-2 px-1 relative"
+                            >
+                                Biography
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="index.html#teaching"
+                                class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative"
+                            >
+                                Teaching
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="projects.html"
+                                class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative"
+                            >
+                                Projects
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="index.html#awards"
+                                class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative"
+                            >
+                                Awards
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://scholar.google.com/citations?user=N5tisn4AAAAJ&hl=en"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative"
+                            >
+                                Publications
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="index.html#research"
+                                class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative"
+                            >
+                                Research
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="w-9 md:hidden"></div>
+                </div>
+
+                <!-- Mobile menu -->
+                <ul
+                    id="mobile-nav-menu"
+                    class="hidden flex-col space-y-1 mt-4 md:hidden bg-white rounded-lg shadow-lg border border-gray-100 p-2"
+                >
+                    <li>
+                        <a
+                            href="index.html#home"
+                            class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium"
+                        >
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="biography.html"
+                            class="block text-center py-3 px-4 rounded-md bg-blue-50 text-blue-600 transition-all duration-200 uppercase tracking-wide text-sm font-medium"
+                        >
+                            Biography
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="index.html#teaching"
+                            class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium"
+                        >
+                            Teaching
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="projects.html"
+                            class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium"
+                        >
+                            Projects
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="index.html#awards"
+                            class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium"
+                        >
+                            Awards
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://scholar.google.com/citations?user=N5tisn4AAAAJ&hl=en"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium"
+                        >
+                            Publications
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="index.html#research"
+                            class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium"
+                        >
+                            Research
+                        </a>
+                    </li>
                 </ul>
-                <div class="w-9 md:hidden"></div>
+            </nav>
+        </header>
+
+        <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Header -->
+            <div class="text-center mb-12 fade-in">
+                <h1 class="text-4xl sm:text-5xl font-bold text-slate-800 mb-4">Complete Biography</h1>
+                <h2 class="text-2xl text-blue-600 font-semibold mb-2">Dr. Uthayasanker Thayasivam</h2>
+                <p class="text-lg text-gray-600">Head of Department, Computer Science & Engineering</p>
+                <p class="text-gray-600">University of Moratuwa, Sri Lanka</p>
             </div>
 
-            <!-- Mobile menu -->
-            <ul id="mobile-nav-menu" class="hidden flex-col space-y-1 mt-4 md:hidden bg-white rounded-lg shadow-lg border border-gray-100 p-2">
-                <li><a href="index.html#home" class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium">Home</a></li>
-                <li><a href="biography.html" class="block text-center py-3 px-4 rounded-md bg-blue-50 text-blue-600 transition-all duration-200 uppercase tracking-wide text-sm font-medium">Biography</a></li>
-                <li><a href="index.html#teaching" class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium">Teaching</a></li>
-                <li><a href="projects.html" class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium">Projects</a></li>
-                <li><a href="index.html#awards" class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium">Awards</a></li>
-                <li><a href="https://scholar.google.com/citations?user=N5tisn4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium">Publications</a></li>
-                <li><a href="index.html#research" class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium">Research</a></li>
-            </ul>
-        </nav>
-    </header>
+            <!-- Biography Sections -->
+            <div class="space-y-12">
+                <!-- Early Childhood -->
+                <section class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 fade-in">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-6 pb-3 border-b border-blue-100">Early Childhood</h3>
+                    <p class="text-gray-700 leading-relaxed text-lg">
+                        I was born in Jaffna, a city which had to, directly and quite incessantly, confront the effects
+                        of the civil war that had ravaged the island for more than three decades. Despite my childhood
+                        having been such a rough patch, in retrospect it had always been memorable and surprisingly
+                        cheerful. Akin to the silver lining in each cloud, growing in such rough conditions made me
+                        focus more on my education. My parents insisted the importance of learning despite the
+                        shortcomings I was protractedly bound to deal with. Till my teenage years, I even had to study
+                        under the faint light scattered by oil lamps. However, I enjoyed learning despite all the
+                        hardships. I took an eminent liking to mathematics and Tamil language. During this time, my dad
+                        used to regularly share with us his work experience as a government medical officer operating
+                        all around the island. He never failed to point out to us, that we are surrounded by good people
+                        and how such people have been of immense help both in his personal and professional life. Thus
+                        far, these stories have had a great influence on me and now I share some of these stories with
+                        my son.
+                    </p>
+                </section>
 
-    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <!-- Header -->
-        <div class="text-center mb-12 fade-in">
-            <h1 class="text-4xl sm:text-5xl font-bold text-slate-800 mb-4">Complete Biography</h1>
-            <h2 class="text-2xl text-blue-600 font-semibold mb-2">Dr. Uthayasanker Thayasivam</h2>
-            <p class="text-lg text-gray-600">Head of Department, Computer Science & Engineering</p>
-            <p class="text-gray-600">University of Moratuwa, Sri Lanka</p>
-        </div>
+                <!-- High School -->
+                <section class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 fade-in">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-6 pb-3 border-b border-blue-100">High School</h3>
+                    <p class="text-gray-700 leading-relaxed text-lg">
+                        In the late nineties (1998) our family moved to Colombo. I joined Hindu College Colombo (HCC)
+                        while I was reading grade 10. Teachers at HCC spotted various talents in me and molded me into a
+                        leader. Within just a year at my new school, I was actively involved in drama, debates and
+                        hockey. Specifically, I performed extremely well in debates and won roughly 32 champion trophies
+                        during my time at school. I was appointed as the head prefect of the college which gave me a
+                        lifetime of memorable experience in leading 32 smart young men for the betterment of our school.
+                        The year I headed the prefect's guild also happened to be the golden jubilee year of the
+                        college, owing to which we were granted with the opportunity of organizing jubilee walk, jubilee
+                        exhibition and jubilee grand cultural day in addition to regular school functions such as prize
+                        giving, sports meet, teacher's day, etc. The task of organizing these events consumed
+                        significant time. Hence my teachers and well-wishers constantly reminded me the importance of
+                        advanced level examinations that were round the corner. With their guidance and the support from
+                        some of my close friends, I was able to manage both my studies and extra curricular activities
+                        and achieve good grades in advanced level examinations adequate to confer on me an admission to
+                        the University of Moratuwa with merits.
+                    </p>
+                </section>
 
-        <!-- Biography Sections -->
-        <div class="space-y-12">
-            <!-- Early Childhood -->
-            <section class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 fade-in">
-                <h3 class="text-2xl font-bold text-blue-600 mb-6 pb-3 border-b border-blue-100">Early Childhood</h3>
-                <p class="text-gray-700 leading-relaxed text-lg">
-                    I was born in Jaffna, a city which had to, directly and quite incessantly, confront the effects of the civil war that had ravaged the island for more than three decades. Despite my childhood having been such a rough patch, in retrospect it had always been memorable and surprisingly cheerful. Akin to the silver lining in each cloud, growing in such rough conditions made me focus more on my education. My parents insisted the importance of learning despite the shortcomings I was protractedly bound to deal with. Till my teenage years, I even had to study under the faint light scattered by oil lamps. However, I enjoyed learning despite all the hardships. I took an eminent liking to mathematics and Tamil language. During this time, my dad used to regularly share with us his work experience as a government medical officer operating all around the island. He never failed to point out to us, that we are surrounded by good people and how such people have been of immense help both in his personal and professional life. Thus far, these stories have had a great influence on me and now I share some of these stories with my son.
-                </p>
-            </section>
+                <!-- Undergraduate Studies -->
+                <section class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 fade-in">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-6 pb-3 border-b border-blue-100">
+                        Undergraduate Studies
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed text-lg">
+                        My 4 years at Moratuwa, learning electronics and telecommunication engineering was very
+                        different from my time at high school. This was mainly due to the self-learning required in an
+                        university environment was relatively higher than that required for high schools. Fortunately
+                        for me, 3 of my very good friends from school ended up with me in the same degree program.
+                        During this time not only our friendship strengthened, but it also helped me remarkably in my
+                        academic activities as well. As a result of this, three of us graduated with first class and one
+                        with second upper. Though it was undeniably enjoyable and memorable, I wouldn't say that this
+                        was equally enjoyable as my school days. I felt that my undergraduate studies pressurized me
+                        more than what was generally called for. As a result of this, I wanted to create a more
+                        conducive environment for my students. I tried to reduce the unwanted stress caused in an
+                        undergraduate course by improving clarity and providing necessary resources. Though I studied
+                        electronics and telecommunications as my major, I have always enjoyed computer engineering
+                        subjects. Hence, I ended up assuming a computer science and engineering career later.
+                    </p>
+                </section>
 
-            <!-- High School -->
-            <section class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 fade-in">
-                <h3 class="text-2xl font-bold text-blue-600 mb-6 pb-3 border-b border-blue-100">High School</h3>
-                <p class="text-gray-700 leading-relaxed text-lg">
-                    In the late nineties (1998) our family moved to Colombo. I joined Hindu College Colombo (HCC) while I was reading grade 10. Teachers at HCC spotted various talents in me and molded me into a leader. Within just a year at my new school, I was actively involved in drama, debates and hockey. Specifically, I performed extremely well in debates and won roughly 32 champion trophies during my time at school. I was appointed as the head prefect of the college which gave me a lifetime of memorable experience in leading 32 smart young men for the betterment of our school. The year I headed the prefect's guild also happened to be the golden jubilee year of the college, owing to which we were granted with the opportunity of organizing jubilee walk, jubilee exhibition and jubilee grand cultural day in addition to regular school functions such as prize giving, sports meet, teacher's day, etc. The task of organizing these events consumed significant time. Hence my teachers and well-wishers constantly reminded me the importance of advanced level examinations that were round the corner. With their guidance and the support from some of my close friends, I was able to manage both my studies and extra curricular activities and achieve good grades in advanced level examinations adequate to confer on me an admission to the University of Moratuwa with merits.
-                </p>
-            </section>
+                <!-- Brief Working Experience -->
+                <section class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 fade-in">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-6 pb-3 border-b border-blue-100">
+                        Brief Working Experience
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed text-lg">
+                        Right after my graduation, I was hired as a software engineer at Millennium Information
+                        Technology limited, one of the leading software companies at that time. I was able to impress my
+                        team leaders with my expeditiously problem-solving skills. I realized the importance of the
+                        extracurricular activities I had done during school time. The skills I had developed due to the
+                        extracurricular activities enabled me to distinguish myself from the other engineers promptly.
+                        This helped me grow in my career relatively faster.
+                    </p>
+                </section>
 
-            <!-- Undergraduate Studies -->
-            <section class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 fade-in">
-                <h3 class="text-2xl font-bold text-blue-600 mb-6 pb-3 border-b border-blue-100">Undergraduate Studies</h3>
-                <p class="text-gray-700 leading-relaxed text-lg">
-                    My 4 years at Moratuwa, learning electronics and telecommunication engineering was very different from my time at high school. This was mainly due to the self-learning required in an university environment was relatively higher than that required for high schools. Fortunately for me, 3 of my very good friends from school ended up with me in the same degree program. During this time not only our friendship strengthened, but it also helped me remarkably in my academic activities as well. As a result of this, three of us graduated with first class and one with second upper. Though it was undeniably enjoyable and memorable, I wouldn't say that this was equally enjoyable as my school days. I felt that my undergraduate studies pressurized me more than what was generally called for. As a result of this, I wanted to create a more conducive environment for my students. I tried to reduce the unwanted stress caused in an undergraduate course by improving clarity and providing necessary resources. Though I studied electronics and telecommunications as my major, I have always enjoyed computer engineering subjects. Hence, I ended up assuming a computer science and engineering career later.
-                </p>
-            </section>
+                <!-- Inspiration from working with Doctoral -->
+                <section class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 fade-in">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-6 pb-3 border-b border-blue-100">
+                        Inspiration from working with Doctoral
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed text-lg">
+                        One year later, I joined a research engineering team which worked on "information retrieval"
+                        products. This team was composed of several doctoral degree holders. I cherished the mentorship
+                        I obtained during this time from the senior engineers with doctoral degrees. They were humble,
+                        yet smart. The manner in which they explained concepts and phenomena were remarkable. The
+                        solutions they came up with were simple but effective. I was tremendously inspired by them. This
+                        led me to pursue a doctoral degree with the aspiration that doing so will assist me achieve such
+                        an exemplary personality.
+                    </p>
+                </section>
 
-            <!-- Brief Working Experience -->
-            <section class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 fade-in">
-                <h3 class="text-2xl font-bold text-blue-600 mb-6 pb-3 border-b border-blue-100">Brief Working Experience</h3>
-                <p class="text-gray-700 leading-relaxed text-lg">
-                    Right after my graduation, I was hired as a software engineer at Millennium Information Technology limited, one of the leading software companies at that time. I was able to impress my team leaders with my expeditiously problem-solving skills. I realized the importance of the extracurricular activities I had done during school time. The skills I had developed due to the extracurricular activities enabled me to distinguish myself from the other engineers promptly. This helped me grow in my career relatively faster.
-                </p>
-            </section>
+                <!-- Doctoral Degree -->
+                <section class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 fade-in">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-6 pb-3 border-b border-blue-100">Doctoral Degree</h3>
+                    <p class="text-gray-700 leading-relaxed text-lg">
+                        I applied to several north American universities to follow a doctoral program in computer
+                        science. I was offered an opportunity to pursue a doctoral degree in computer science at
+                        University of Georgia USA. I was also provided a scholarship along with the admission. I was
+                        lucky to have had Prof. Prashant Doshi, a great researcher, as my supervisor. He showed me the
+                        manner to analyze computer science problems, which was entirely different to the previous
+                        approaches I adopted. The time I spent as a doctoral student under his supervision enabled me to
+                        take up the challenging engineering and scientific problems in the field of semantic computing.
+                        During this tenor I published three research papers in an esteemed American Artificial
+                        Intelligence conference and a journal in a highly respected Journal of Artificial Intelligence.
+                        He bestowed on me several opportunities to co teach his subjects and co review some conferences
+                        for which he served as a member of the program committee. This paved my path to become a
+                        stronger researcher in the field of artificial intelligence. During this time, I interned at
+                        Google and Accenture Tech Labs, some of the leading artificial intelligence tech companies in
+                        the world. I was awarded both outstanding graduate student of the year and graduate student
+                        fellowship. One of my most cherished memories during my tenure at Google is the time I spent
+                        with Prof. Peter Norvig, head of Google research, who is also known as the father of modern AI.
+                    </p>
+                </section>
 
-            <!-- Inspiration from working with Doctoral -->
-            <section class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 fade-in">
-                <h3 class="text-2xl font-bold text-blue-600 mb-6 pb-3 border-b border-blue-100">Inspiration from working with Doctoral</h3>
-                <p class="text-gray-700 leading-relaxed text-lg">
-                    One year later, I joined a research engineering team which worked on "information retrieval" products. This team was composed of several doctoral degree holders. I cherished the mentorship I obtained during this time from the senior engineers with doctoral degrees. They were humble, yet smart. The manner in which they explained concepts and phenomena were remarkable. The solutions they came up with were simple but effective. I was tremendously inspired by them. This led me to pursue a doctoral degree with the aspiration that doing so will assist me achieve such an exemplary personality.
-                </p>
-            </section>
+                <!-- Working in Silicon Valley -->
+                <section class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 fade-in">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-6 pb-3 border-b border-blue-100">
+                        Working in Silicon Valley
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed text-lg">
+                        I completed my doctoral degree in 2013 and joined an old and famous information retrieval
+                        company called Ask Jeeves, founded by the famous natural language scientist Jeeves. Until 2017,
+                        I worked in various companies which allowed me to gain profuse experience in technology and
+                        ability to manage researchers. I was able to evolve into a senior manager within the first
+                        couple of years of my career. I further gained ample experience in cutting edge technologies in
+                        fields of Big Data, Data Science and Machine Learning. This proved to be of profound value for
+                        my teaching since I generally associate my personal experience with teaching.
+                    </p>
+                </section>
 
-            <!-- Doctoral Degree -->
-            <section class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 fade-in">
-                <h3 class="text-2xl font-bold text-blue-600 mb-6 pb-3 border-b border-blue-100">Doctoral Degree</h3>
-                <p class="text-gray-700 leading-relaxed text-lg">
-                    I applied to several north American universities to follow a doctoral program in computer science. I was offered an opportunity to pursue a doctoral degree in computer science at University of Georgia USA. I was also provided a scholarship along with the admission. I was lucky to have had Prof. Prashant Doshi, a great researcher, as my supervisor. He showed me the manner to analyze computer science problems, which was entirely different to the previous approaches I adopted. The time I spent as a doctoral student under his supervision enabled me to take up the challenging engineering and scientific problems in the field of semantic computing. During this tenor I published three research papers in an esteemed American Artificial Intelligence conference and a journal in a highly respected Journal of Artificial Intelligence. He bestowed on me several opportunities to co teach his subjects and co review some conferences for which he served as a member of the program committee. This paved my path to become a stronger researcher in the field of artificial intelligence. During this time, I interned at Google and Accenture Tech Labs, some of the leading artificial intelligence tech companies in the world. I was awarded both outstanding graduate student of the year and graduate student fellowship. One of my most cherished memories during my tenure at Google is the time I spent with Prof. Peter Norvig, head of Google research, who is also known as the father of modern AI.
-                </p>
-            </section>
+                <!-- Dream comes True -->
+                <section class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 fade-in">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-6 pb-3 border-b border-blue-100">
+                        Dream comes True
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed text-lg">
+                        I was always passionate about coming back to Sri Lanka and serving the country. Late Mr. Lalith
+                        Athulathmudali is a great inspiration for me. I was awarded the Mahapola scholarship which was
+                        founded by Late Mr. Lalith Athulathmudali. This instilled in me the concept of "Giving Back to
+                        the country". Even before I went to the USA I was interested in coming back to Sri Lanka to
+                        settle down. I may not have owned the dream of becoming an academic. However, with time I
+                        realized my passion for teaching and working in the field of computer science and engineering as
+                        a researcher. The skills I developed as a researcher and the hands-on experience I gained during
+                        my industrial encounter in the USA fuelled me to perform as a lecturer. I thoroughly enjoy my
+                        time as a lecturer at the university I studied.
+                    </p>
+                </section>
+            </div>
 
-            <!-- Working in Silicon Valley -->
-            <section class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 fade-in">
-                <h3 class="text-2xl font-bold text-blue-600 mb-6 pb-3 border-b border-blue-100">Working in Silicon Valley</h3>
-                <p class="text-gray-700 leading-relaxed text-lg">
-                    I completed my doctoral degree in 2013 and joined an old and famous information retrieval company called Ask Jeeves, founded by the famous natural language scientist Jeeves. Until 2017, I worked in various companies which allowed me to gain profuse experience in technology and ability to manage researchers. I was able to evolve into a senior manager within the first couple of years of my career. I further gained ample experience in cutting edge technologies in fields of Big Data, Data Science and Machine Learning. This proved to be of profound value for my teaching since I generally associate my personal experience with teaching.
-                </p>
-            </section>
+            <!-- Navigation -->
+            <div class="text-center mt-16 pt-8 border-t border-gray-200">
+                <a
+                    href="index.html"
+                    class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-md hover:shadow-lg"
+                >
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                        ></path>
+                    </svg>
+                    Return to Main Website
+                </a>
+            </div>
+        </main>
 
-            <!-- Dream comes True -->
-            <section class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 fade-in">
-                <h3 class="text-2xl font-bold text-blue-600 mb-6 pb-3 border-b border-blue-100">Dream comes True</h3>
-                <p class="text-gray-700 leading-relaxed text-lg">
-                    I was always passionate about coming back to Sri Lanka and serving the country. Late Mr. Lalith Athulathmudali is a great inspiration for me. I was awarded the Mahapola scholarship which was founded by Late Mr. Lalith Athulathmudali. This instilled in me the concept of "Giving Back to the country". Even before I went to the USA I was interested in coming back to Sri Lanka to settle down. I may not have owned the dream of becoming an academic. However, with time I realized my passion for teaching and working in the field of computer science and engineering as a researcher. The skills I developed as a researcher and the hands-on experience I gained during my industrial encounter in the USA fuelled me to perform as a lecturer. I thoroughly enjoy my time as a lecturer at the university I studied.
-                </p>
-            </section>
-        </div>
-
-        <!-- Navigation -->
-        <div class="text-center mt-16 pt-8 border-t border-gray-200">
-            <a href="index.html" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-md hover:shadow-lg">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-                </svg>
-                Return to Main Website
-            </a>
-        </div>
-    </main>
-
-    <footer class="bg-slate-700 text-white py-8 mt-16">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <p class="text-gray-300">© Copyright 2025 . All Rights Reserved | Dr. Uthayasanker Thayasivam</p>
-        </div>
-    </footer>
-</body>
+        <footer class="bg-slate-700 text-white py-8 mt-16">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <p class="text-gray-300">© Copyright 2025 . All Rights Reserved | Dr. Uthayasanker Thayasivam</p>
+            </div>
+        </footer>
+    </body>
 </html>

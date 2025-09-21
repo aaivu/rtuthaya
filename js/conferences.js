@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', async function() {
+document.addEventListener('DOMContentLoaded', async function () {
     // Mobile menu functionality
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileNavMenu = document.getElementById('mobile-nav-menu');
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Search functionality
     const searchInput = document.getElementById('search-input');
     if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
+        searchInput.addEventListener('input', e => {
             searchConferences(e.target.value);
         });
     }
@@ -52,7 +52,6 @@ async function loadConferences() {
 
         // Display conferences
         displayConferences(filteredConferences);
-
     } catch (error) {
         console.error('Error loading conferences:', error);
         loadingElement.classList.add('hidden');
@@ -98,9 +97,7 @@ function displayConferences(conferences) {
 
     noResults.classList.add('hidden');
 
-    container.innerHTML = conferences.map((conference, index) =>
-        createConferenceCard(conference, index)
-    ).join('');
+    container.innerHTML = conferences.map((conference, index) => createConferenceCard(conference, index)).join('');
 }
 
 function createConferenceCard(conference, index) {
@@ -142,14 +139,18 @@ function createConferenceCard(conference, index) {
                     </p>
                 </div>
 
-                ${isSubmissionOpen && daysToSubmission <= 30 ? `
+                ${
+    isSubmissionOpen && daysToSubmission <= 30
+        ? `
                     <div class="text-right">
                         <span class="bg-red-100 text-red-800 text-xs font-medium px-2 py-1 rounded-full">
                             <i class="fas fa-clock mr-1"></i>
                             ${daysToSubmission} days left
                         </span>
                     </div>
-                ` : ''}
+                `
+        : ''
+}
             </div>
 
             <!-- Dates -->
@@ -173,19 +174,23 @@ function createConferenceCard(conference, index) {
             <!-- Topics -->
             <div class="mb-4">
                 <div class="flex flex-wrap gap-2">
-                    ${conference.topics.map(topic => {
-                        const colorClass = getTopicColor(topic);
-                        return `<span class="px-2 py-1 rounded-full text-xs font-medium ${colorClass}">${topic}</span>`;
-                    }).join('')}
+                    ${conference.topics
+        .map(topic => {
+            const colorClass = getTopicColor(topic);
+            return `<span class="px-2 py-1 rounded-full text-xs font-medium ${colorClass}">${topic}</span>`;
+        })
+        .join('')}
                 </div>
             </div>
 
             <!-- Action Button -->
             <div class="flex justify-between items-center">
                 <div class="text-sm text-gray-500">
-                    ${isSubmissionOpen ?
-                        `<i class="fas fa-paper-plane mr-1 text-green-600"></i>Submissions Open` :
-                        `<i class="fas fa-times-circle mr-1 text-red-500"></i>Submissions Closed`}
+                    ${
+    isSubmissionOpen
+        ? '<i class="fas fa-paper-plane mr-1 text-green-600"></i>Submissions Open'
+        : '<i class="fas fa-times-circle mr-1 text-red-500"></i>Submissions Closed'
+}
                 </div>
                 <a href="${conference.website}"
                    target="_blank"
@@ -220,7 +225,7 @@ function formatDate(dateString) {
 }
 
 // Filter functions
-window.filterConferences = function(filterType) {
+window.filterConferences = function (filterType) {
     currentFilter = filterType;
 
     // Update active filter button
@@ -231,47 +236,48 @@ window.filterConferences = function(filterType) {
 
     const today = new Date();
 
-    switch(filterType) {
-        case 'all':
-            filteredConferences = [...allConferences];
-            break;
-        case 'conference':
-            filteredConferences = allConferences.filter(conf => conf.type === 'conference');
-            break;
-        case 'workshop':
-            filteredConferences = allConferences.filter(conf => conf.type === 'workshop');
-            break;
-        case 'open':
-            filteredConferences = allConferences.filter(conf => {
-                const submissionDate = new Date(conf.submissionDate);
-                return submissionDate > today;
-            });
-            break;
-        case 'upcoming':
-            filteredConferences = allConferences.filter(conf => {
-                const conferenceDate = new Date(conf.conferenceDate);
-                return conferenceDate > today;
-            });
-            break;
+    switch (filterType) {
+    case 'all':
+        filteredConferences = [...allConferences];
+        break;
+    case 'conference':
+        filteredConferences = allConferences.filter(conf => conf.type === 'conference');
+        break;
+    case 'workshop':
+        filteredConferences = allConferences.filter(conf => conf.type === 'workshop');
+        break;
+    case 'open':
+        filteredConferences = allConferences.filter(conf => {
+            const submissionDate = new Date(conf.submissionDate);
+            return submissionDate > today;
+        });
+        break;
+    case 'upcoming':
+        filteredConferences = allConferences.filter(conf => {
+            const conferenceDate = new Date(conf.conferenceDate);
+            return conferenceDate > today;
+        });
+        break;
     }
 
     sortConferences();
     displayConferences(filteredConferences);
 };
 
-window.filterByTopic = function(topic) {
+window.filterByTopic = function (topic) {
     // Toggle active state
     event.target.classList.toggle('opacity-50');
 
-    const activeTopics = Array.from(document.querySelectorAll('.topic-chip.opacity-50'))
-        .map(chip => chip.textContent.trim());
+    const activeTopics = Array.from(document.querySelectorAll('.topic-chip.opacity-50')).map(chip =>
+        chip.textContent.trim()
+    );
 
     if (activeTopics.length === 0) {
         filteredConferences = [...allConferences];
     } else {
         const topicMap = {
-            'AI': 'Artificial Intelligence',
-            'ML': 'Machine Learning',
+            AI: 'Artificial Intelligence',
+            ML: 'Machine Learning',
             'Data Science': 'Data Science',
             'Computer Vision': 'Computer Vision',
             'Image Processing': 'Image Processing'
@@ -279,9 +285,7 @@ window.filterByTopic = function(topic) {
 
         const selectedTopics = activeTopics.map(t => topicMap[t] || t);
 
-        filteredConferences = allConferences.filter(conf =>
-            conf.topics.some(topic => selectedTopics.includes(topic))
-        );
+        filteredConferences = allConferences.filter(conf => conf.topics.some(topic => selectedTopics.includes(topic)));
     }
 
     // Apply current filter as well
@@ -302,11 +306,12 @@ function searchConferences(query) {
     }
 
     const searchTerm = query.toLowerCase();
-    const searchResults = filteredConferences.filter(conf =>
-        conf.name.toLowerCase().includes(searchTerm) ||
-        conf.acronym.toLowerCase().includes(searchTerm) ||
-        conf.location.toLowerCase().includes(searchTerm) ||
-        conf.topics.some(topic => topic.toLowerCase().includes(searchTerm))
+    const searchResults = filteredConferences.filter(
+        conf =>
+            conf.name.toLowerCase().includes(searchTerm) ||
+            conf.acronym.toLowerCase().includes(searchTerm) ||
+            conf.location.toLowerCase().includes(searchTerm) ||
+            conf.topics.some(topic => topic.toLowerCase().includes(searchTerm))
     );
 
     displayConferences(searchResults);

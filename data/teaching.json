@@ -3,7 +3,13 @@
     "summary": {
       "totalCourses": 150,
       "yearsOfTeaching": "12+ years",
-      "degrees": ["Engineering CSE", "MSc/PG Dip in CS", "MSc/PG Dip in DS & AI", "MBA/PG Dip in BAS in IT", "Master of DS & AI"],
+      "degrees": [
+        "Engineering CSE",
+        "MSc/PG Dip in CS",
+        "MSc/PG Dip in DS & AI",
+        "MBA/PG Dip in BAS in IT",
+        "Master of DS & AI"
+      ],
       "roles": ["Main Examiner", "Moderator", "Co Examiner", "Evaluator"]
     },
     "featured": [

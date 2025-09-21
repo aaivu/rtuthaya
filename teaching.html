@@ -1,273 +1,565 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teaching Experience - Dr. Uthayasanker Thayasivam</title>
-    <link rel="icon" type="image/png" href="images/sir.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .nav-link.active {
-            color: #2563eb;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: #2563eb;
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-
-        .nav-link.active::after,
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 0.8s ease forwards;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Teaching Experience - Dr. Uthayasanker Thayasivam</title>
+        <link rel="icon" type="image/png" href="images/sir.png" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <style>
+            html {
+                scroll-behavior: smooth;
             }
-        }
 
-        .fade-in:nth-child(1) { animation-delay: 0.1s; }
-        .fade-in:nth-child(2) { animation-delay: 0.2s; }
-        .fade-in:nth-child(3) { animation-delay: 0.3s; }
-        .fade-in:nth-child(4) { animation-delay: 0.4s; }
+            .nav-link.active {
+                color: #2563eb;
+            }
 
-        .course-card {
-            transition: all 0.3s ease;
-        }
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 0;
+                height: 2px;
+                background: #2563eb;
+                transition: all 0.3s ease;
+                transform: translateX(-50%);
+            }
 
-        .course-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        }
+            .nav-link.active::after,
+            .nav-link:hover::after {
+                width: 100%;
+            }
 
-        .filter-chip.active {
-            background: #2563eb;
-            color: white;
-        }
+            .fade-in {
+                opacity: 0;
+                transform: translateY(20px);
+                animation: fadeIn 0.8s ease forwards;
+            }
 
-        .category-chip.active {
-            background: #2563eb;
-            color: white;
-        }
-    </style>
-</head>
-<body class="bg-gray-50">
-    <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
-        <nav class="max-w-6xl mx-auto px-4 py-4">
-            <div class="flex justify-between items-center md:justify-center">
-                <button id="mobile-menu-btn" class="md:hidden focus:outline-none p-2 rounded-lg hover:bg-gray-100 transition-colors">
-                    <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-                <ul id="nav-menu" class="hidden md:flex md:space-x-8 text-sm font-medium">
-                    <li><a href="index.html#home" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative">Home</a></li>
-                    <li><a href="biography.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative">Biography</a></li>
-                    <li><a href="teaching.html" class="nav-link text-blue-600 font-semibold transition-all duration-300 uppercase tracking-wider py-2 px-1 relative">Teaching</a></li>
-                    <li><a href="projects.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative">Projects</a></li>
-                    <li><a href="conferences.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative">Conferences</a></li>
-                    <li><a href="index.html#awards" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative">Awards</a></li>
-                    <li><a href="https://scholar.google.com/citations?user=N5tisn4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative">Publications</a></li>
-                    <li><a href="index.html#research" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative">Research</a></li>
-                </ul>
-                <div class="w-9 md:hidden"></div>
-            </div>
+            @keyframes fadeIn {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
 
-            <!-- Mobile menu -->
-            <ul id="mobile-nav-menu" class="hidden flex-col space-y-1 mt-4 md:hidden bg-white rounded-lg shadow-lg border border-gray-100 p-2">
-                <li><a href="index.html#home" class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium">Home</a></li>
-                <li><a href="biography.html" class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium">Biography</a></li>
-                <li><a href="teaching.html" class="block text-center py-3 px-4 rounded-md bg-blue-50 text-blue-600 transition-all duration-200 uppercase tracking-wide text-sm font-medium">Teaching</a></li>
-                <li><a href="projects.html" class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium">Projects</a></li>
-                <li><a href="conferences.html" class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium">Conferences</a></li>
-                <li><a href="index.html#awards" class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium">Awards</a></li>
-                <li><a href="https://scholar.google.com/citations?user=N5tisn4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium">Publications</a></li>
-                <li><a href="index.html#research" class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium">Research</a></li>
-            </ul>
-        </nav>
-    </header>
+            .fade-in:nth-child(1) {
+                animation-delay: 0.1s;
+            }
+            .fade-in:nth-child(2) {
+                animation-delay: 0.2s;
+            }
+            .fade-in:nth-child(3) {
+                animation-delay: 0.3s;
+            }
+            .fade-in:nth-child(4) {
+                animation-delay: 0.4s;
+            }
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <!-- Back Button -->
-        <div class="mb-8 fade-in">
-            <a href="index.html#teaching" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
-                <i class="fas fa-arrow-left mr-2"></i>
-                Back to Home
-            </a>
-        </div>
+            .course-card {
+                transition: all 0.3s ease;
+            }
 
-        <!-- Header -->
-        <div class="text-center mb-12 fade-in">
-            <h1 class="text-4xl sm:text-5xl font-bold text-slate-800 mb-4">Teaching Experience</h1>
-            <p class="text-xl text-gray-600 max-w-4xl mx-auto">Comprehensive overview of courses taught across undergraduate and postgraduate programs in Computer Science, Data Science, and AI</p>
-        </div>
+            .course-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            }
 
-        <!-- Summary Statistics -->
-        <div id="summary-stats" class="fade-in">
-            <!-- Stats will be loaded here -->
-        </div>
+            .filter-chip.active {
+                background: #2563eb;
+                color: white;
+            }
 
-        <!-- Filters -->
-        <div class="bg-white rounded-2xl shadow-sm border-0 p-6 mb-8 fade-in">
-            <div class="flex flex-wrap gap-3 mb-4">
-                <span class="text-sm font-medium text-gray-700">Filter by:</span>
-                <button onclick="filterCourses('all')" class="filter-chip active px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-blue-100 hover:text-blue-700 transition-colors">All</button>
-                <button onclick="filterCourses('undergraduate')" class="filter-chip px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-blue-100 hover:text-blue-700 transition-colors">Undergraduate</button>
-                <button onclick="filterCourses('postgraduate')" class="filter-chip px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-blue-100 hover:text-blue-700 transition-colors">Postgraduate</button>
-                <button onclick="filterCourses('main_examiner')" class="filter-chip px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-blue-100 hover:text-blue-700 transition-colors">Main Examiner</button>
-                <button onclick="filterCourses('moderator')" class="filter-chip px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-blue-100 hover:text-blue-700 transition-colors">Moderator</button>
-            </div>
-
-            <div id="categories-container" class="flex flex-wrap gap-2">
-                <span class="text-sm font-medium text-gray-700">Categories:</span>
-                <!-- Categories will be loaded dynamically -->
-            </div>
-        </div>
-
-        <!-- Search -->
-        <div class="bg-white rounded-2xl shadow-sm border-0 p-6 mb-8 fade-in">
-            <div class="relative">
-                <input type="text"
-                       id="search-input"
-                       placeholder="Search courses by name, code, or degree program..."
-                       class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                <i class="fas fa-search absolute left-3 top-4 text-gray-400"></i>
-            </div>
-        </div>
-
-        <!-- Courses Grid -->
-        <div id="courses-container" class="space-y-6">
-            <!-- Courses will be loaded here by JavaScript -->
-        </div>
-
-        <!-- Loading State -->
-        <div id="loading" class="text-center py-12">
-            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
-            <p class="mt-4 text-gray-600">Loading courses...</p>
-        </div>
-
-        <!-- Error State -->
-        <div id="error" class="hidden text-center py-12">
-            <div class="text-red-500 mb-4">
-                <i class="fas fa-exclamation-circle text-4xl"></i>
-            </div>
-            <p class="text-gray-600">Failed to load courses. Please try again later.</p>
-        </div>
-
-        <!-- No Results -->
-        <div id="no-results" class="hidden text-center py-12">
-            <div class="text-gray-400 mb-4">
-                <i class="fas fa-search text-4xl"></i>
-            </div>
-            <p class="text-gray-600">No courses found matching your criteria.</p>
-        </div>
-    </main>
-
-    <footer id="footer" class="bg-slate-700 text-white py-10 mt-16">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-                <!-- Dr. Uthayasanker Contact -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Dr. Uthayasanker Thayasivam</h3>
-
-                    <div class="bg-slate-600 p-3 rounded-md mb-3">
-                        <h5 class="font-semibold text-white mb-2 text-sm">Office Address</h5>
-                        <p class="text-gray-300 text-xs leading-relaxed">
-                            Dept. of CSE<br>
-                            Faculty of Engineering<br>
-                            University of Moratuwa<br>
-                            Katubedda, Moratuwa 10400<br>
-                            Sri Lanka
-                        </p>
-                    </div>
-
-                    <div class="space-y-1 text-sm">
-                        <p class="text-gray-300"><strong>Email:</strong> uthaya@cse.mrt.ac.lk</p>
-                        <p class="text-gray-300"><strong>Phone:</strong> +94 11 2640381</p>
-                        <p class="text-gray-300"><strong>Hours:</strong> Mon-Fri<br>9AM-5PM</p>
-                    </div>
-                </div>
-
-                <!-- Luxshan Contact -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Luxshan Thavarasa</h3>
-                    <p class="text-gray-400 text-sm mb-3">Website Designer</p>
-
-                    <div class="space-y-2 text-sm">
-                        <p class="text-gray-300"><strong>Department:</strong><br>Computer Science & Engineering</p>
-                        <p class="text-gray-300"><strong>Email:</strong><br>luxshan.20@cse.mrt.ac.lk</p>
-                    </div>
-
-                    <div class="flex items-center text-gray-300 mt-4 text-sm">
-                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            .category-chip.active {
+                background: #2563eb;
+                color: white;
+            }
+        </style>
+    </head>
+    <body class="bg-gray-50">
+        <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+            <nav class="max-w-6xl mx-auto px-4 py-4">
+                <div class="flex justify-between items-center md:justify-center">
+                    <button
+                        id="mobile-menu-btn"
+                        class="md:hidden focus:outline-none p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                    >
+                        <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"
+                            ></path>
                         </svg>
-                        LinkedIn Profile
-                    </div>
-
+                    </button>
+                    <ul id="nav-menu" class="hidden md:flex md:space-x-8 text-sm font-medium">
+                        <li>
+                            <a
+                                href="index.html#home"
+                                class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative"
+                            >
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="biography.html"
+                                class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative"
+                            >
+                                Biography
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="teaching.html"
+                                class="nav-link text-blue-600 font-semibold transition-all duration-300 uppercase tracking-wider py-2 px-1 relative"
+                            >
+                                Teaching
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="projects.html"
+                                class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative"
+                            >
+                                Projects
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="conferences.html"
+                                class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative"
+                            >
+                                Conferences
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="index.html#awards"
+                                class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative"
+                            >
+                                Awards
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://scholar.google.com/citations?user=N5tisn4AAAAJ&hl=en"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative"
+                            >
+                                Publications
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="index.html#research"
+                                class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 uppercase tracking-wider py-2 px-1 relative"
+                            >
+                                Research
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="w-9 md:hidden"></div>
                 </div>
 
-                <!-- Navigation -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Navigation</h3>
-                    <ul class="space-y-2">
-                        <li><a href="index.html#home" class="text-gray-300 hover:text-white transition-colors flex items-center text-sm"><span class="mr-1">›</span> Home</a></li>
-                        <li><a href="biography.html" class="text-gray-300 hover:text-white transition-colors flex items-center text-sm"><span class="mr-1">›</span> Biography</a></li>
-                        <li><a href="teaching.html" class="text-gray-300 hover:text-white transition-colors flex items-center text-sm"><span class="mr-1">›</span> Teaching</a></li>
-                        <li><a href="projects.html" class="text-gray-300 hover:text-white transition-colors flex items-center text-sm"><span class="mr-1">›</span> Projects</a></li>
-                        <li><a href="conferences.html" class="text-gray-300 hover:text-white transition-colors flex items-center text-sm"><span class="mr-1">›</span> Conferences</a></li>
-                        <li><a href="index.html#research" class="text-gray-300 hover:text-white transition-colors flex items-center text-sm"><span class="mr-1">›</span> Research</a></li>
-                        <li><a href="https://scholar.google.com/citations?user=N5tisn4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors flex items-center text-sm"><span class="mr-1">›</span> Publications</a></li>
-                        <li><a href="index.html#awards" class="text-gray-300 hover:text-white transition-colors flex items-center text-sm"><span class="mr-1">›</span> Awards</a></li>
-                    </ul>
+                <!-- Mobile menu -->
+                <ul
+                    id="mobile-nav-menu"
+                    class="hidden flex-col space-y-1 mt-4 md:hidden bg-white rounded-lg shadow-lg border border-gray-100 p-2"
+                >
+                    <li>
+                        <a
+                            href="index.html#home"
+                            class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium"
+                        >
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="biography.html"
+                            class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium"
+                        >
+                            Biography
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="teaching.html"
+                            class="block text-center py-3 px-4 rounded-md bg-blue-50 text-blue-600 transition-all duration-200 uppercase tracking-wide text-sm font-medium"
+                        >
+                            Teaching
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="projects.html"
+                            class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium"
+                        >
+                            Projects
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="conferences.html"
+                            class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium"
+                        >
+                            Conferences
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="index.html#awards"
+                            class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium"
+                        >
+                            Awards
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://scholar.google.com/citations?user=N5tisn4AAAAJ&hl=en"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium"
+                        >
+                            Publications
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="index.html#research"
+                            class="block text-center py-3 px-4 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 uppercase tracking-wide text-gray-700 text-sm font-medium"
+                        >
+                            Research
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Back Button -->
+            <div class="mb-8 fade-in">
+                <a
+                    href="index.html#teaching"
+                    class="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                >
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Back to Home
+                </a>
+            </div>
+
+            <!-- Header -->
+            <div class="text-center mb-12 fade-in">
+                <h1 class="text-4xl sm:text-5xl font-bold text-slate-800 mb-4">Teaching Experience</h1>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                    Comprehensive overview of courses taught across undergraduate and postgraduate programs in Computer
+                    Science, Data Science, and AI
+                </p>
+            </div>
+
+            <!-- Summary Statistics -->
+            <div id="summary-stats" class="fade-in">
+                <!-- Stats will be loaded here -->
+            </div>
+
+            <!-- Filters -->
+            <div class="bg-white rounded-2xl shadow-sm border-0 p-6 mb-8 fade-in">
+                <div class="flex flex-wrap gap-3 mb-4">
+                    <span class="text-sm font-medium text-gray-700">Filter by:</span>
+                    <button
+                        onclick="filterCourses('all')"
+                        class="filter-chip active px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-blue-100 hover:text-blue-700 transition-colors"
+                    >
+                        All
+                    </button>
+                    <button
+                        onclick="filterCourses('undergraduate')"
+                        class="filter-chip px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-blue-100 hover:text-blue-700 transition-colors"
+                    >
+                        Undergraduate
+                    </button>
+                    <button
+                        onclick="filterCourses('postgraduate')"
+                        class="filter-chip px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-blue-100 hover:text-blue-700 transition-colors"
+                    >
+                        Postgraduate
+                    </button>
+                    <button
+                        onclick="filterCourses('main_examiner')"
+                        class="filter-chip px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-blue-100 hover:text-blue-700 transition-colors"
+                    >
+                        Main Examiner
+                    </button>
+                    <button
+                        onclick="filterCourses('moderator')"
+                        class="filter-chip px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-blue-100 hover:text-blue-700 transition-colors"
+                    >
+                        Moderator
+                    </button>
                 </div>
 
-                <!-- Research Network -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Research Network</h3>
-                    <p class="text-gray-300 mb-4 text-sm">Part of the research initiatives at University of Moratuwa</p>
-
-                    <ul class="space-y-2 mb-4">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors flex items-center text-sm"><span class="mr-1">›</span> DataSEARCH Hub</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors flex items-center text-sm"><span class="mr-1">›</span> NLP Centre</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors flex items-center text-sm"><span class="mr-1">›</span> Active Projects</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors flex items-center text-sm"><span class="mr-1">›</span> Research Ethics</a></li>
-                    </ul>
-
-                    <div class="border-t border-gray-600 pt-3">
-                        <h4 class="text-sm font-medium mb-2">Collaborations</h4>
-                        <p class="text-gray-300 text-xs">Open to academic partnerships in AI and ML.</p>
-                    </div>
+                <div id="categories-container" class="flex flex-wrap gap-2">
+                    <span class="text-sm font-medium text-gray-700">Categories:</span>
+                    <!-- Categories will be loaded dynamically -->
                 </div>
             </div>
 
-            <!-- Copyright -->
-            <div class="border-t border-gray-600 mt-12 pt-8 text-center">
-                <p class="text-gray-300">© Copyright 2025 . All Rights Reserved | Academic Research Portfolio</p>
+            <!-- Search -->
+            <div class="bg-white rounded-2xl shadow-sm border-0 p-6 mb-8 fade-in">
+                <div class="relative">
+                    <input
+                        type="text"
+                        id="search-input"
+                        placeholder="Search courses by name, code, or degree program..."
+                        class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                    <i class="fas fa-search absolute left-3 top-4 text-gray-400"></i>
+                </div>
             </div>
-        </div>
-    </footer>
 
-    <script src="js/teaching.js"></script>
-</body>
+            <!-- Courses Grid -->
+            <div id="courses-container" class="space-y-6">
+                <!-- Courses will be loaded here by JavaScript -->
+            </div>
+
+            <!-- Loading State -->
+            <div id="loading" class="text-center py-12">
+                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+                <p class="mt-4 text-gray-600">Loading courses...</p>
+            </div>
+
+            <!-- Error State -->
+            <div id="error" class="hidden text-center py-12">
+                <div class="text-red-500 mb-4">
+                    <i class="fas fa-exclamation-circle text-4xl"></i>
+                </div>
+                <p class="text-gray-600">Failed to load courses. Please try again later.</p>
+            </div>
+
+            <!-- No Results -->
+            <div id="no-results" class="hidden text-center py-12">
+                <div class="text-gray-400 mb-4">
+                    <i class="fas fa-search text-4xl"></i>
+                </div>
+                <p class="text-gray-600">No courses found matching your criteria.</p>
+            </div>
+        </main>
+
+        <footer id="footer" class="bg-slate-700 text-white py-10 mt-16">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                    <!-- Dr. Uthayasanker Contact -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Dr. Uthayasanker Thayasivam</h3>
+
+                        <div class="bg-slate-600 p-3 rounded-md mb-3">
+                            <h5 class="font-semibold text-white mb-2 text-sm">Office Address</h5>
+                            <p class="text-gray-300 text-xs leading-relaxed">
+                                Dept. of CSE
+                                <br />
+                                Faculty of Engineering
+                                <br />
+                                University of Moratuwa
+                                <br />
+                                Katubedda, Moratuwa 10400
+                                <br />
+                                Sri Lanka
+                            </p>
+                        </div>
+
+                        <div class="space-y-1 text-sm">
+                            <p class="text-gray-300">
+                                <strong>Email:</strong>
+                                uthaya@cse.mrt.ac.lk
+                            </p>
+                            <p class="text-gray-300">
+                                <strong>Phone:</strong>
+                                +94 11 2640381
+                            </p>
+                            <p class="text-gray-300">
+                                <strong>Hours:</strong>
+                                Mon-Fri
+                                <br />
+                                9AM-5PM
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Luxshan Contact -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Luxshan Thavarasa</h3>
+                        <p class="text-gray-400 text-sm mb-3">Website Designer</p>
+
+                        <div class="space-y-2 text-sm">
+                            <p class="text-gray-300">
+                                <strong>Department:</strong>
+                                <br />
+                                Computer Science & Engineering
+                            </p>
+                            <p class="text-gray-300">
+                                <strong>Email:</strong>
+                                <br />
+                                luxshan.20@cse.mrt.ac.lk
+                            </p>
+                        </div>
+
+                        <div class="flex items-center text-gray-300 mt-4 text-sm">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                                />
+                            </svg>
+                            LinkedIn Profile
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Navigation</h3>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="index.html#home"
+                                    class="text-gray-300 hover:text-white transition-colors flex items-center text-sm"
+                                >
+                                    <span class="mr-1">›</span>
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="biography.html"
+                                    class="text-gray-300 hover:text-white transition-colors flex items-center text-sm"
+                                >
+                                    <span class="mr-1">›</span>
+                                    Biography
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="teaching.html"
+                                    class="text-gray-300 hover:text-white transition-colors flex items-center text-sm"
+                                >
+                                    <span class="mr-1">›</span>
+                                    Teaching
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="projects.html"
+                                    class="text-gray-300 hover:text-white transition-colors flex items-center text-sm"
+                                >
+                                    <span class="mr-1">›</span>
+                                    Projects
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="conferences.html"
+                                    class="text-gray-300 hover:text-white transition-colors flex items-center text-sm"
+                                >
+                                    <span class="mr-1">›</span>
+                                    Conferences
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="index.html#research"
+                                    class="text-gray-300 hover:text-white transition-colors flex items-center text-sm"
+                                >
+                                    <span class="mr-1">›</span>
+                                    Research
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://scholar.google.com/citations?user=N5tisn4AAAAJ&hl=en"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-gray-300 hover:text-white transition-colors flex items-center text-sm"
+                                >
+                                    <span class="mr-1">›</span>
+                                    Publications
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="index.html#awards"
+                                    class="text-gray-300 hover:text-white transition-colors flex items-center text-sm"
+                                >
+                                    <span class="mr-1">›</span>
+                                    Awards
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Research Network -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Research Network</h3>
+                        <p class="text-gray-300 mb-4 text-sm">
+                            Part of the research initiatives at University of Moratuwa
+                        </p>
+
+                        <ul class="space-y-2 mb-4">
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-gray-300 hover:text-white transition-colors flex items-center text-sm"
+                                >
+                                    <span class="mr-1">›</span>
+                                    DataSEARCH Hub
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-gray-300 hover:text-white transition-colors flex items-center text-sm"
+                                >
+                                    <span class="mr-1">›</span>
+                                    NLP Centre
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-gray-300 hover:text-white transition-colors flex items-center text-sm"
+                                >
+                                    <span class="mr-1">›</span>
+                                    Active Projects
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-gray-300 hover:text-white transition-colors flex items-center text-sm"
+                                >
+                                    <span class="mr-1">›</span>
+                                    Research Ethics
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="border-t border-gray-600 pt-3">
+                            <h4 class="text-sm font-medium mb-2">Collaborations</h4>
+                            <p class="text-gray-300 text-xs">Open to academic partnerships in AI and ML.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="border-t border-gray-600 mt-12 pt-8 text-center">
+                    <p class="text-gray-300">© Copyright 2025 . All Rights Reserved | Academic Research Portfolio</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/teaching.js"></script>
+    </body>
 </html>

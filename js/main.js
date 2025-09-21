@@ -172,7 +172,8 @@ class AcademicWebsite {
 
         courses.forEach((course, index) => {
             const courseCard = document.createElement('div');
-            courseCard.className = 'group bg-white p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300';
+            courseCard.className =
+                'group bg-white p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300';
             courseCard.style.animationDelay = `${index * 0.1}s`;
 
             const categoryColor = this.getCategoryColor(course.category);
@@ -215,9 +216,9 @@ class AcademicWebsite {
             'Data Science': { bg: 'bg-green-50', text: 'text-green-600' },
             'AI & NLP': { bg: 'bg-purple-50', text: 'text-purple-600' },
             'Big Data': { bg: 'bg-orange-50', text: 'text-orange-600' },
-            'Programming': { bg: 'bg-gray-50', text: 'text-gray-600' },
-            'Analytics': { bg: 'bg-red-50', text: 'text-red-600' },
-            'Statistics': { bg: 'bg-indigo-50', text: 'text-indigo-600' }
+            Programming: { bg: 'bg-gray-50', text: 'text-gray-600' },
+            Analytics: { bg: 'bg-red-50', text: 'text-red-600' },
+            Statistics: { bg: 'bg-indigo-50', text: 'text-indigo-600' }
         };
         return colors[category] || { bg: 'bg-gray-50', text: 'text-gray-600' };
     }
@@ -270,10 +271,12 @@ class AcademicWebsite {
 
         courses.forEach(course => {
             const courseItem = document.createElement('div');
-            courseItem.className = 'group flex items-center space-x-4 p-5 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all duration-300 cursor-pointer';
+            courseItem.className =
+                'group flex items-center space-x-4 p-5 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all duration-300 cursor-pointer';
 
             const iconWrapper = document.createElement('div');
-            iconWrapper.className = 'flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg flex items-center justify-center group-hover:from-blue-100 group-hover:to-indigo-100 transition-colors duration-300';
+            iconWrapper.className =
+                'flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg flex items-center justify-center group-hover:from-blue-100 group-hover:to-indigo-100 transition-colors duration-300';
 
             const icon = document.createElement('i');
             icon.className = `${courseIcons[course] || 'fas fa-book'} text-blue-600 text-lg group-hover:text-blue-700 transition-colors duration-300`;
@@ -282,7 +285,8 @@ class AcademicWebsite {
             courseContent.className = 'flex-grow';
 
             const courseName = document.createElement('h4');
-            courseName.className = 'text-gray-800 font-semibold text-sm leading-tight group-hover:text-blue-700 transition-colors duration-300';
+            courseName.className =
+                'text-gray-800 font-semibold text-sm leading-tight group-hover:text-blue-700 transition-colors duration-300';
             courseName.textContent = course;
 
             const courseType = document.createElement('p');
@@ -357,14 +361,14 @@ class AcademicWebsite {
         }
     }
 
-
     createList(items) {
         const list = document.createElement('ul');
         list.className = 'space-y-4 mt-6';
 
         items.forEach((item, index) => {
             const listItem = document.createElement('li');
-            listItem.className = 'group border-l-3 border-blue-400 pl-4 py-3 hover:border-blue-600 transition-all duration-200';
+            listItem.className =
+                'group border-l-3 border-blue-400 pl-4 py-3 hover:border-blue-600 transition-all duration-200';
             listItem.style.animationDelay = `${index * 0.1}s`;
 
             if (typeof item === 'string') {
@@ -372,7 +376,8 @@ class AcademicWebsite {
             } else if (typeof item === 'object') {
                 if (item.title) {
                     const title = document.createElement('h4');
-                    title.className = 'font-semibold text-slate-800 text-lg mb-2 group-hover:text-blue-700 transition-colors';
+                    title.className =
+                        'font-semibold text-slate-800 text-lg mb-2 group-hover:text-blue-700 transition-colors';
                     title.textContent = item.title;
                     listItem.appendChild(title);
                 }
@@ -384,9 +389,11 @@ class AcademicWebsite {
                 }
                 if (item.link && item.link !== '#') {
                     const link = document.createElement('a');
-                    link.className = 'inline-flex items-center mt-3 text-blue-600 hover:text-blue-800 font-medium transition-colors';
+                    link.className =
+                        'inline-flex items-center mt-3 text-blue-600 hover:text-blue-800 font-medium transition-colors';
                     link.href = item.link;
-                    link.innerHTML = 'Read more <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>';
+                    link.innerHTML =
+                        'Read more <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>';
                     listItem.appendChild(link);
                 }
             }
@@ -400,7 +407,7 @@ class AcademicWebsite {
     setupNavigation() {
         const navLinks = document.querySelectorAll('nav a[href^="#"]');
         navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
+            link.addEventListener('click', e => {
                 e.preventDefault();
                 const targetId = link.getAttribute('href').substring(1);
                 const targetElement = document.getElementById(targetId);
@@ -447,14 +454,14 @@ class AcademicWebsite {
 }
 
 // Make showDetailedBiography globally accessible
-window.showDetailedBiography = function() {
+window.showDetailedBiography = function () {
     const biographySection = document.getElementById('biography');
     const detailedData = JSON.parse(biographySection.getAttribute('data-detailed'));
 
     // Create modal overlay
     const modal = document.createElement('div');
     modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4';
-    modal.onclick = (e) => {
+    modal.onclick = e => {
         if (e.target === modal) {
             document.body.removeChild(modal);
             document.body.style.overflow = 'auto';

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', async function() {
+document.addEventListener('DOMContentLoaded', async function () {
     // Mobile menu functionality
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileNavMenu = document.getElementById('mobile-nav-menu');
@@ -40,7 +40,6 @@ async function loadProject(projectId) {
 
         // Display project
         displayProject(project, projectContainer);
-
     } catch (error) {
         console.error('Error loading project:', error);
         loadingElement.classList.add('hidden');
@@ -57,9 +56,10 @@ function createProjectDetail(project) {
     const projectDiv = document.createElement('div');
     projectDiv.className = 'space-y-16';
 
-    const statusBadge = project.status === 'completed'
-        ? '<span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Completed</span>'
-        : '<span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">In Progress</span>';
+    const statusBadge =
+        project.status === 'completed'
+            ? '<span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Completed</span>'
+            : '<span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">In Progress</span>';
 
     projectDiv.innerHTML = `
         <!-- Project Header -->
@@ -80,9 +80,13 @@ function createProjectDetail(project) {
 
                 <!-- Tags -->
                 <div class="flex flex-wrap gap-2">
-                    ${project.tags.map(tag => `
+                    ${project.tags
+        .map(
+            tag => `
                         <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">${tag}</span>
-                    `).join('')}
+                    `
+        )
+        .join('')}
                 </div>
             </div>
         </div>
@@ -128,14 +132,20 @@ function createImageCarousel(project) {
 
     return `
         <div class="carousel-container h-96 sm:h-[28rem] md:h-[32rem] relative" id="${carouselId}">
-            ${project.images.map((image, index) => `
+            ${project.images
+        .map(
+            (image, index) => `
                 <img src="../${image.url}"
                      alt="${image.caption || project.title}"
                      class="carousel-image absolute inset-0 w-full h-full object-cover ${index === 0 ? 'opacity-100' : 'opacity-0'}"
                      data-index="${index}">
-            `).join('')}
+            `
+        )
+        .join('')}
 
-            ${project.images.length > 1 ? `
+            ${
+    project.images.length > 1
+        ? `
                 <button class="carousel-nav prev" onclick="changeImage('${carouselId}', -1)">
                     <i class="fas fa-chevron-left"></i>
                 </button>
@@ -144,20 +154,26 @@ function createImageCarousel(project) {
                 </button>
 
                 <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                    ${project.images.map((_, index) => `
+                    ${project.images
+        .map(
+            (_, index) => `
                         <div class="w-3 h-3 rounded-full bg-white opacity-60 cursor-pointer carousel-dot ${index === 0 ? 'opacity-100' : ''}"
                              onclick="goToImage('${carouselId}', ${index})"></div>
-                    `).join('')}
+                    `
+        )
+        .join('')}
                 </div>
 
                 <div class="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
                     <span id="current-caption-${carouselId}">${project.images[0].caption}</span>
                 </div>
-            ` : `
+            `
+        : `
                 <div class="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
                     ${project.images[0].caption}
                 </div>
-            `}
+            `
+}
         </div>
     `;
 }
@@ -175,19 +191,27 @@ function createResultsSection(results) {
                     <p class="text-gray-700 leading-relaxed text-lg">${results.performance}</p>
                 </div>
 
-                ${results.contributions && results.contributions.length > 0 ? `
+                ${
+    results.contributions && results.contributions.length > 0
+        ? `
                     <div>
                         <h3 class="text-xl font-semibold text-gray-800 mb-4">Key Contributions</h3>
                         <div class="grid md:grid-cols-2 gap-6">
-                            ${results.contributions.map(contrib => `
+                            ${results.contributions
+        .map(
+            contrib => `
                                 <div class="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-400">
                                     <h4 class="text-lg font-semibold text-blue-800 mb-3">${contrib.title}</h4>
                                     <p class="text-gray-700 leading-relaxed">${contrib.description}</p>
                                 </div>
-                            `).join('')}
+                            `
+        )
+        .join('')}
                         </div>
                     </div>
-                ` : ''}
+                `
+        : ''
+}
 
                 <div class="bg-green-50 p-6 rounded-xl border-0">
                     <h3 class="text-xl font-semibold text-green-800 mb-4">Impact</h3>
@@ -203,12 +227,16 @@ function createAwardsSection(awards) {
         <div class="fade-in bg-white rounded-2xl shadow-sm border-0 p-8">
             <h2 class="text-2xl font-bold text-slate-800 mb-6">Awards & Recognition</h2>
             <div class="space-y-6">
-                ${awards.map(award => `
+                ${awards
+        .map(
+            award => `
                     <div class="bg-yellow-50 p-6 rounded-xl border-0">
                         <h3 class="text-xl font-semibold text-yellow-800 mb-3">${award.title}</h3>
                         <p class="text-gray-700 mb-4 leading-relaxed">${award.description}</p>
 
-                        ${award.details ? `
+                        ${
+    award.details
+        ? `
                             <div class="text-sm text-gray-600 space-y-2 bg-white p-4 rounded-lg">
                                 ${award.details.paper_title ? `<p><strong>Paper:</strong> ${award.details.paper_title}</p>` : ''}
                                 ${award.details.authors ? `<p><strong>Authors:</strong> ${award.details.authors.join(', ')}</p>` : ''}
@@ -217,9 +245,13 @@ function createAwardsSection(awards) {
                                 ${award.details.pages ? `<p><strong>Pages:</strong> ${award.details.pages}</p>` : ''}
                                 ${award.details.publisher ? `<p><strong>Publisher:</strong> ${award.details.publisher}</p>` : ''}
                             </div>
-                        ` : ''}
+                        `
+        : ''
+}
                     </div>
-                `).join('')}
+                `
+        )
+        .join('')}
             </div>
         </div>
     `;
@@ -232,7 +264,9 @@ function createTeamSection(team) {
         <div class="fade-in bg-white rounded-2xl shadow-sm border-0 p-8">
             <h2 class="text-2xl font-bold text-slate-800 mb-6">Team Members</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                ${team.map(member => `
+                ${team
+        .map(
+            member => `
                     <div class="bg-gray-50 p-6 rounded-xl text-center border-0">
                         <div class="mb-4">
                             <h3 class="text-lg font-semibold text-gray-800">${member.name}</h3>
@@ -247,7 +281,9 @@ function createTeamSection(team) {
                             ${member.links?.github && member.links.github !== '#' ? `<a href="${member.links.github}" target="_blank" class="text-gray-500 hover:text-blue-600 text-lg"><i class="fab fa-github"></i></a>` : ''}
                         </div>
                     </div>
-                `).join('')}
+                `
+        )
+        .join('')}
             </div>
         </div>
     `;
@@ -264,9 +300,13 @@ function createLinksSection(links) {
             <h2 class="text-2xl font-bold text-slate-800 mb-6">Project Resources</h2>
 
             <div class="space-y-6">
-                ${primaryLinks.length > 0 ? `
+                ${
+    primaryLinks.length > 0
+        ? `
                     <div class="flex flex-wrap gap-4">
-                        ${primaryLinks.map(link => `
+                        ${primaryLinks
+        .map(
+            link => `
                             <a href="${link.url}"
                                target="_blank"
                                rel="noopener noreferrer"
@@ -274,13 +314,21 @@ function createLinksSection(links) {
                                 <i class="${link.icon} mr-3"></i>
                                 ${link.title}
                             </a>
-                        `).join('')}
+                        `
+        )
+        .join('')}
                     </div>
-                ` : ''}
+                `
+        : ''
+}
 
-                ${secondaryLinks.length > 0 ? `
+                ${
+    secondaryLinks.length > 0
+        ? `
                     <div class="flex flex-wrap gap-3">
-                        ${secondaryLinks.map(link => `
+                        ${secondaryLinks
+        .map(
+            link => `
                             <a href="${link.url}"
                                target="_blank"
                                rel="noopener noreferrer"
@@ -288,9 +336,13 @@ function createLinksSection(links) {
                                 <i class="${link.icon} mr-2"></i>
                                 ${link.title}
                             </a>
-                        `).join('')}
+                        `
+        )
+        .join('')}
                     </div>
-                ` : ''}
+                `
+        : ''
+}
             </div>
         </div>
     `;
@@ -304,19 +356,22 @@ function formatDateRange(startDate, endDate) {
 }
 
 function formatMultilineText(text) {
-    return text.split('\\n').map(line => {
-        if (line.startsWith('**') && line.endsWith('**')) {
-            const content = line.slice(2, -2);
-            return `<h3 class="text-lg font-semibold text-gray-800 mt-6 mb-3">${content}</h3>`;
-        }
-        return `<p class="mb-4 text-lg leading-relaxed">${line}</p>`;
-    }).join('');
+    return text
+        .split('\\n')
+        .map(line => {
+            if (line.startsWith('**') && line.endsWith('**')) {
+                const content = line.slice(2, -2);
+                return `<h3 class="text-lg font-semibold text-gray-800 mt-6 mb-3">${content}</h3>`;
+            }
+            return `<p class="mb-4 text-lg leading-relaxed">${line}</p>`;
+        })
+        .join('');
 }
 
 // Carousel functionality
-let currentImageIndex = {};
+const currentImageIndex = {};
 
-window.changeImage = function(carouselId, direction) {
+window.changeImage = function (carouselId, direction) {
     const carousel = document.getElementById(carouselId);
     const images = carousel.querySelectorAll('.carousel-image');
     const dots = carousel.querySelectorAll('.carousel-dot');
@@ -354,7 +409,7 @@ window.changeImage = function(carouselId, direction) {
     }
 };
 
-window.goToImage = function(carouselId, index) {
+window.goToImage = function (carouselId, index) {
     const carousel = document.getElementById(carouselId);
     const images = carousel.querySelectorAll('.carousel-image');
     const dots = carousel.querySelectorAll('.carousel-dot');
