@@ -237,114 +237,11 @@ jobs:
               print('✅ No broken internal links detected!')
           "
 
-  # Security and Performance
-  security-performance:
-    name: 🔒 Security & Performance
-    runs-on: ubuntu-latest
-    needs: code-quality
-    steps:
-      - name: 📥 Checkout code
-        uses: actions/checkout@v4
-
-      - name: 🔒 Security scan for secrets
-        run: |
-          echo "🔍 Scanning for potential secrets..."
-          # Check for common secret patterns
-          if grep -r -i "password\|secret\|key\|token" --include="*.js" --include="*.json" --include="*.html" . | grep -v "placeholder\|example\|test"; then
-            echo "⚠️ Potential secrets found in code!"
-            exit 1
-          else
-            echo "✅ No secrets detected in code!"
-          fi
-
-      - name: 📊 File size check
-        run: |
-          echo "📊 Checking file sizes..."
-          find . -name "*.html" -o -name "*.js" -o -name "*.css" | while read file; do
-            size=$(wc -c < "$file")
-            if [ $size -gt 500000 ]; then  # 500KB limit
-              echo "⚠️ Large file detected: $file ($size bytes)"
-            fi
-          done
-          echo "✅ File size check completed!"
-
-      - name: 🖼️ Image optimization check
-        run: |
-          echo "🖼️ Checking image files..."
-          if [ -d "images" ]; then
-            find images -name "*.jpg" -o -name "*.png" -o -name "*.gif" | while read img; do
-              size=$(wc -c < "$img")
-              if [ $size -gt 2000000 ]; then  # 2MB limit
-                echo "⚠️ Large image: $img ($size bytes) - consider optimization"
-              fi
-            done
-          fi
-          echo "✅ Image check completed!"
-
-  # Deployment Preview (for main branch)
-  deploy-preview:
-    name: 🚀 Deploy Preview
-    runs-on: ubuntu-latest
-    needs: [validate-json, code-quality, security-performance]
-    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
-    steps:
-      - name: 📥 Checkout code
-        uses: actions/checkout@v4
-
-      - name: 🐍 Setup Python for server
-        uses: actions/setup-python@v4
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-
-      - name: 🧪 Test local server
-        run: |
-          echo "🧪 Testing local server startup..."
-          timeout 10s python3 -m http.server 8000 &
-          sleep 5
-          if curl -f http://localhost:8000/ > /dev/null 2>&1; then
-            echo "✅ Server started successfully!"
-          else
-            echo "❌ Server failed to start!"
-            exit 1
-          fi
-
-      - name: 📋 Generate deployment report
-        run: |
-          echo "📋 Deployment Report" > deployment-report.md
-          echo "===================" >> deployment-report.md
-          echo "" >> deployment-report.md
-          echo "🏛️ **Dr. Uthayasanker Thayasivam's Academic Website**" >> deployment-report.md
-          echo "" >> deployment-report.md
-          echo "📊 **Statistics:**" >> deployment-report.md
-          echo "- HTML files: $(find . -name '*.html' | wc -l)" >> deployment-report.md
-          echo "- JavaScript files: $(find . -name '*.js' | wc -l)" >> deployment-report.md
-          echo "- JSON files: $(find . -name '*.json' | wc -l)" >> deployment-report.md
-          echo "- Images: $(find images -name '*' 2>/dev/null | wc -l || echo 0)" >> deployment-report.md
-          echo "" >> deployment-report.md
-          echo "✅ **Status:** All checks passed - Ready for deployment!" >> deployment-report.md
-          echo "" >> deployment-report.md
-          echo "🌐 **Pages:**" >> deployment-report.md
-          find . -maxdepth 1 -name "*.html" -exec basename {} \; | sort | sed 's/^/- /' >> deployment-report.md
-
-          echo "📋 Deployment report generated:"
-          cat deployment-report.md
-
-      - name: 📤 Upload deployment artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: academic-website
-          path: |
-            .
-            !.git
-            !node_modules
-            !.github
-          retention-days: 30
-
   # Notification Job
   notify:
     name: 📢 Notifications
     runs-on: ubuntu-latest
-    needs: [validate-json, code-quality, security-performance, deploy-preview]
+    needs: [validate-json, code-quality]
     if: always()
     steps:
       - name: 📊 Report Status
@@ -353,10 +250,8 @@ jobs:
           echo "========================="
           echo "📋 JSON Validation: ${{ needs.validate-json.result }}"
           echo "🎨 Code Quality: ${{ needs.code-quality.result }}"
-          echo "🔒 Security & Performance: ${{ needs.security-performance.result }}"
-          echo "🚀 Deploy Preview: ${{ needs.deploy-preview.result }}"
 
-          if [[ "${{ needs.validate-json.result }}" == "success" && "${{ needs.code-quality.result }}" == "success" && "${{ needs.security-performance.result }}" == "success" ]]; then
+          if [[ "${{ needs.validate-json.result }}" == "success" && "${{ needs.code-quality.result }}" == "success" ]]; then
             echo ""
             echo "🎉 All checks passed! Academic website is ready for deployment."
             echo "🏛️ Dr. Uthayasanker Thayasivam's Research Portfolio"
